@@ -1,0 +1,289 @@
+/*NanumSquare.scss*/
+@font-face {
+  font-family: "nsL";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../fonts/NanumSquareL.woff) format("woff"), url(../fonts/NanumSquareL.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsR";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../fonts/NanumSquareR.woff2) format("woff2"), url(../fonts/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquareR.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsB";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../fonts/NanumSquareB.woff2) format("woff2"), url(../fonts//NanumSquareB.woff) format("woff"), url(../fonts/NanumSquareB.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsE";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../fonts/NanumSquareEB.woff2) format("woff2"), url(../fonts//NanumSquareEB.woff) format("woff"), url(../fonts/NanumSquareEB.ttf) format("truetype"); }
+
+/* Reset CSS
+ * --------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+table {
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal; }
+
+strong {
+  font-weight: bold; }
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+.blind {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
+html {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'nsR',-apple-system,sans-serif;
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg); }
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff; }
+
+nav {
+  padding: 70px 100px !important; }
+  nav .logo_s {
+    display: none; }
+  nav ul li.on a {
+    color: red !important; }
+  nav ul li a {
+    padding-bottom: 10px; }
+  nav.scroll_bg {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 0px 40px !important;
+    background: #111 !important; }
+    nav.scroll_bg .logo_s {
+      display: block; }
+    nav.scroll_bg .logo {
+      display: none; }
+
+.footer {
+  background-color: #000;
+  height: 200px; }
+
+h1 {
+  font-size: 13em; }
+
+h2 {
+  font-size: 8em; }
+
+p {
+  font-size: 4em;
+  line-height: 1.3; }
+
+h2 + p {
+  font-size: 3em; }
+
+.vertical-center {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 47%;
+  -webkit-transform: translateY(-47%);
+  -ms-transform: translateY(-47%);
+  transform: translateY(-47%); }
+
+.vertical-center p {
+  margin-top: 23px; }
+
+.inner {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto; }
+
+.section {
+  position: relative;
+  overflow: hidden; }
+
+video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: fill;
+  object-fit: fill; }
+
+.home {
+  background: #6dcb94;
+  background: #3ecc98; }
+
+.panel1 {
+  background: #ec8200;
+  background: #ff7c0a; }
+
+.panel2 {
+  background: #64a0d4;
+  background: #47a3d1; }
+
+.panel3 {
+  background: #e14456;
+  background: #f73656; }
+
+.code {
+  background: rgba(0, 0, 0, 0.2); }
+
+.pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  z-index: 10; }
+
+.pagination a {
+  display: block;
+  height: 20px;
+  margin-bottom: 5px;
+  color: white;
+  position: relative;
+  padding: 4px; }
+
+.pagination a.active:after {
+  -webkit-box-shadow: inset 0 0 0 5px;
+  box-shadow: inset 0 0 0 5px; }
+
+.pagination a .hover-text {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px; }
+
+.pagination a:hover .hover-text {
+  opacity: 1; }
+
+.pagination a:after {
+  -webkit-transition: box-shadow 0.5s ease;
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 4px;
+  bottom: 0; }
+
+.vertical-center p.cta {
+  margin-top: 5px; }
+
+.vertical-center a:link,
+.vertical-center a:visited {
+  color: white;
+  text-decoration: none;
+  font-size: 0.6em; }
+
+.vertical-center a:hover {
+  text-decoration: underline; }
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 15vw; }
+  h2 {
+    font-size: 12vw; }
+  .inner {
+    width: 70%; } }
+
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%; }
