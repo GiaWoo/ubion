@@ -4,24 +4,36 @@
   font-family: "nsL";
   font-display: swap;
   /* auto, block, swap, fallback, optional */
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg);
   src: url(../fonts/NanumSquareL.woff) format("woff"), url(../fonts/NanumSquareL.ttf) format("truetype"); }
 
 @font-face {
   font-family: "nsR";
   font-display: swap;
   /* auto, block, swap, fallback, optional */
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg);
   src: url(../fonts/NanumSquareR.woff2) format("woff2"), url(../fonts/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquareR.ttf) format("truetype"); }
 
 @font-face {
   font-family: "nsB";
   font-display: swap;
   /* auto, block, swap, fallback, optional */
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg);
   src: url(../fonts/NanumSquareB.woff2) format("woff2"), url(../fonts//NanumSquareB.woff) format("woff"), url(../fonts/NanumSquareB.ttf) format("truetype"); }
 
 @font-face {
   font-family: "nsE";
   font-display: swap;
   /* auto, block, swap, fallback, optional */
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg);
   src: url(../fonts/NanumSquareEB.woff2) format("woff2"), url(../fonts//NanumSquareEB.woff) format("woff"), url(../fonts/NanumSquareEB.ttf) format("truetype"); }
 
 /* Reset CSS
@@ -113,9 +125,6 @@ html {
 body {
   font-family: 'nsR', sans-serif, -apple-system;
   font-size: 18px;
-  -webkit-transform: skew(-0.03deg);
-  -ms-transform: skew(-0.03deg);
-  transform: skew(-0.03deg);
   color: white; }
 
 .wrap {
