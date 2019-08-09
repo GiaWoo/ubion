@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "nsL";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../NanumSquare/NanumSquareL.woff) format("woff"), url(../NanumSquare/NanumSquareL.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsR";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../NanumSquare/NanumSquareR.woff2) format("woff2"), url(../NanumSquare/NanumSquareR.woff) format("woff"), url(../NanumSquare/NanumSquareR.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsB";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../NanumSquare/NanumSquareB.woff2) format("woff2"), url(../NanumSquare//NanumSquareB.woff) format("woff"), url(../NanumSquare/NanumSquareB.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "nsE";
+  font-display: swap;
+  /* auto, block, swap, fallback, optional */
+  src: url(../NanumSquare/NanumSquareEB.woff2) format("woff2"), url(../NanumSquare//NanumSquareEB.woff) format("woff"), url(../NanumSquare/NanumSquareEB.ttf) format("truetype"); }
+
+/*크롬과 파이어폭스 브라우저에서 글자에 안티앨리어싱이 적용*/
+html {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'nsR',-apple-system,Roboto,Arial,"Noto Sans",sans-serif;
+  -webkit-transform: skew(-0.03deg);
+  -ms-transform: skew(-0.03deg);
+  transform: skew(-0.03deg);
+  /*크롬나눔고딕깨지는현상보정*/ }
