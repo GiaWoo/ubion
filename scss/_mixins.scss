@@ -75,6 +75,16 @@
   *display: inline;
 }
 
+//
+@mixin clearfix{
+  &:after{
+   content:'';
+   display:block;
+   clear:both;
+  }
+}
+
+
 
 //컬러세트 믹스인
 @mixin make-colors($val,$color-value) { 
