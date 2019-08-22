@@ -7,7 +7,7 @@ $(function() {
       scrollbars:false,
       standardScrollElements: "",
       updateHash: true,
-      touchScroll: true,
+      touchScroll: false,
       easing: "easeOutExpo",
       scrollSpeed: 800,
       before:function(i,panels) {
