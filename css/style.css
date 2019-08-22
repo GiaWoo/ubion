@@ -137,7 +137,7 @@ body, .wrap header nav.navbar .navbar-collapse .navbar-nav li a, .wrap section.s
 .wrap .footer {
   background-color: #303030; }
 
-.wrap header nav.navbar .navbar-collapse div.down_box a.down_btn, .wrap section .inner .tit_wrap .ex_txt {
+.wrap header nav.navbar .navbar-collapse div.down_box a.down_btn, .wrap section .inner .tit_wrap .ex_txt, .wrap section .no_pc a {
   color: #666666; }
 
 .wrap section.sub2 .inner article.course_at::-webkit-scrollbar-thumb {
@@ -346,6 +346,17 @@ body {
       @media (max-width: 1200px) {
         .wrap section .inner article {
           margin-top: 40px; } }
+  .wrap section .no_pc {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -50px;
+    margin-bottom: 50px; }
+    @media (max-width: 1200px) {
+      .wrap section .no_pc {
+        display: block; } }
+    .wrap section .no_pc a {
+      text-decoration: none; }
   .wrap section.home {
     background: #000; }
     .wrap section.home video {
