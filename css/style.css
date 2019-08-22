@@ -294,7 +294,7 @@ body {
       width: 1200px;
       padding: 75px 10px;
       margin: 0 auto; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1270px) {
         .wrap section.section .inner {
           width: 100%; } }
       @media (max-width: 768px) {
@@ -327,7 +327,7 @@ body {
         font-family: 'nsL';
         letter-spacing: -0.5px;
         word-break: keep-all; }
-        @media (max-width: 1200px) {
+        @media (max-width: 1270px) {
           .wrap section.section .inner .tit_wrap .ex_txt {
             margin-top: 20px;
             font-size: 20px;
@@ -337,7 +337,7 @@ body {
             display: none; } }
       .wrap section.section .inner article {
         margin-top: 70px; }
-        @media (max-width: 1200px) {
+        @media (max-width: 1270px) {
           .wrap section.section .inner article {
             margin-top: 40px; } }
   .wrap section.home {
@@ -422,11 +422,13 @@ body {
     margin-top: 5px; }
   .wrap section.sub2 .inner article.course_at {
     height: 430px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: none;
     scrollbar-track-color: #111;
     scrollbar-arrow-color: #d2a16d;
     scrollbar-face-color: #303030;
-    scrollbar-shadow-color: #111; }
+    scrollbar-shadow-color: #111;
+    -webkit-overflow-scrolling: touch; }
     .wrap section.sub2 .inner article.course_at::-webkit-scrollbar {
       width: 10px; }
     .wrap section.sub2 .inner article.course_at::-webkit-scrollbar-button {
@@ -477,7 +479,7 @@ body {
     .wrap section.sub3 .inner .tit_wrap .ex_txt {
       font-size: 32px;
       font-size: 2.08rem; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1270px) {
         .wrap section.sub3 .inner .tit_wrap .ex_txt {
           margin-top: 20px;
           font-size: 20px;
@@ -486,7 +488,7 @@ body {
       background: #fff;
       /* The Fallback */
       background: rgba(255, 255, 255, 0.4); }
-      @media (max-width: 1200px) {
+      @media (max-width: 1270px) {
         .wrap section.sub3 .inner article.distinction_at {
           height: 430px;
           overflow-y: scroll;
@@ -539,7 +541,7 @@ body {
         margin-left: 300px; }
       .wrap section.sub3 div.line_wrap i.line_5 {
         margin-left: 589px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1270px) {
     .wrap section.sub4 .inner article.partner_at {
       height: 430px;
       overflow-y: scroll;
@@ -575,7 +577,7 @@ body {
       clear: both; }
     .wrap section.sub4 .inner article.partner_at ul.review_wrap li:first-child {
       margin-left: 0; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1270px) {
       .wrap section.sub4 .inner article.partner_at ul.review_wrap li {
         float: none;
         width: 100%;
@@ -588,7 +590,7 @@ body {
       display: table;
       height: 100%;
       width: 50%; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1270px) {
         .wrap section.sub4 .inner article.partner_at ul.review_wrap li div {
           width: 30%; } }
       @media (max-width: 576px) {
@@ -642,7 +644,7 @@ body {
       float: right;
       text-align: left;
       padding: 45px 20px; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1270px) {
         .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt {
           width: 70%; }
           .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt br {
@@ -675,7 +677,7 @@ body {
       .wrap section.sub4 .inner article.partner_at ul.review_wrap li.only3 .review_txt {
         width: 100%;
         background: url(../img/sec4_icon.png) no-repeat 92% top; }
-        @media (max-width: 1200px) {
+        @media (max-width: 1270px) {
           .wrap section.sub4 .inner article.partner_at ul.review_wrap li.only3 .review_txt {
             background: #fff url(../img/sec4_icon.png) no-repeat 92% top;
             -webkit-border-radius: 10px;
