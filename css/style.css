@@ -491,12 +491,13 @@ body {
       @media (max-width: 1270px) {
         .wrap section.sub3 .inner article.distinction_at {
           height: 430px;
-          overflow-y: scroll;
+          overflow-y: auto;
           overflow-x: hidden;
           scrollbar-track-color: #fff;
           scrollbar-arrow-color: #ff515d;
           scrollbar-face-color: #303030;
-          scrollbar-shadow-color: #fff; }
+          scrollbar-shadow-color: #fff;
+          -webkit-overflow-scrolling: touch; }
           .wrap section.sub3 .inner article.distinction_at::-webkit-scrollbar {
             width: 10px; }
           .wrap section.sub3 .inner article.distinction_at::-webkit-scrollbar-thumb {
@@ -544,12 +545,13 @@ body {
   @media (max-width: 1270px) {
     .wrap section.sub4 .inner article.partner_at {
       height: 430px;
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
       scrollbar-track-color: #e1e1e1;
       scrollbar-arrow-color: #303030;
       scrollbar-face-color: #303030;
-      scrollbar-shadow-color: #e1e1e1; }
+      scrollbar-shadow-color: #e1e1e1;
+      -webkit-overflow-scrolling: touch; }
       .wrap section.sub4 .inner article.partner_at::-webkit-scrollbar {
         width: 10px; }
       .wrap section.sub4 .inner article.partner_at::-webkit-scrollbar-thumb {
