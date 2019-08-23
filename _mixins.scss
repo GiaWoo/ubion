@@ -1,0 +1,386 @@
+﻿@charset "UTF-8";
+/*_mixins.scss*/
+
+@mixin breakpoint($point) {
+  @if $point == laptop {
+    @media (min-width:1201px) and (max-width:1500px) { @content; }
+  }
+  @else if $point == large {
+    @media (max-width: 1200px) { @content; }
+    //높은 해상도의 데스크탑, 노트북 - 와이드 스크린
+  }
+  @else if $point == medium {
+    @media (max-width: 768px) { @content; }
+    //일반 태블릿(아이패드)의 세로 모드
+  }
+  @else if $point == small {
+    @media (max-width: 576px)  { @content; }
+  }
+  @else if $point == tiny {
+    @media (max-width: 320px)  { @content; }
+    //스마트폰과 같은 소형 스크린 Portrait (세로) 모드
+  }
+}
+
+
+//Font Size
+@mixin font-size($sizeValue: 13 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.065 * $sizeValue) + rem;
+}
+
+//Line Height
+@mixin line-height($heightValue: 18 ){
+  line-height: $heightValue + 10px; //fallback for old browsers
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+
+//Opacity - Cross browser opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//배경색에만 투명도 적용 
+@mixin opacity-bg($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+//Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+
+//Gradient
+@mixin vertical-gradient($start: #000, $stop: #FFF) { background: ($start + $stop) / 2;
+    background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+    background: -moz-linear-gradient(center top, $start 0%, $stop 100%);
+    background: -moz-gradient(center top, $start 0%, $stop 100%);
+}
+@mixin vertical-gradient-with-image($image, $start: #000, $stop: #FFF) {
+    background: ($start + $stop) / 2 $image;
+    background: $image, -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+    background: $image, -moz-linear-gradient(center top, $start 0%, $stop 100%);
+    background: $image, -moz-gradient(center top, $start 0%, $stop 100%);
+}
+
+
+//Cross browser inline block
+@mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+//
+@mixin clearfix{
+  &:after{
+   content:'';
+   display:block;
+   clear:both;
+  }
+}
+
+
+
+//컬러세트 믹스인
+@mixin make-colors($val,$color-value) { 
+  %event_wrap_dark_#{$val} { 	
+    background-color: $color-value;
+    color: lighten($color-value, 45%);
+    border-color: lighten($color-value, 45%);
+    a[class^="btn_"],[class*=" btn_"] {	
+      background-color: lighten($color-value, 45%);
+      border: 1px solid lighten($color-value,35%);
+      span, i {
+        color: $color-value;
+      }
+      &:hover {
+        background-color: lighten($color-value, 15%);
+        border-color: lighten($color-value, 25%);
+      }
+    }			
+    .tit_line { //인포존 타이틀 라인있는 스타일 
+      color: lighten($color-value,35%);
+      em { 
+        border-top-color: lighten($color-value,35%);
+      }
+    }
+    dl.date dt {
+      background-color: lighten($color-value, 45%);
+      color: $color-value;
+    }
+    dl.dl-100 dt {
+      i {
+        color: lighten($color-value, 45%);
+      }
+      span {
+        color: $color-value;
+      }
+    }
+    section.topzone span.info i {
+      border:1px solid lighten($color-value, 45%);
+    }
+    section.infozone {
+      background-color: $color-value;
+      div.box {
+        h5, dl dd, div.order_box {
+          color: lighten($color-value, 45%);
+        }
+        div.order_box ul {
+          border:1px solid lighten($color-value, 45%);
+        }
+        h5 em {
+          border-top:1px solid lighten($color-value, 45%);
+        }
+      }		
+    }
+  } 	
+  %event_wrap_light_#{$val} { 
+    background-color: lighten($color-value, 45%);
+    color: $color-value;	
+    border-color: $color-value; 
+    a[class^="btn_"],[class*=" btn_"] {	
+      background-color: $color-value;
+      border: 1px solid darken($color-value,5%);
+      span, i {
+        color: #FFF;
+      }
+      &:hover {
+        background-color: darken($color-value, 15%);
+        border-color: darken($color-value, 10%); 
+      }
+    }	
+    .tit_line { //인포존 타이틀 라인있는 스타일 
+      color: $color-value;
+       em {
+        border-top-color:$color-value;
+      }
+    }	
+    dl.date dt {
+      background-color: $color-value;
+      color: lighten($color-value, 45%);
+    }
+    dl.dl-100 dt {
+       i {
+        color: $color-value;
+      }
+      span {
+        color: lighten($color-value, 45%);
+      }
+    }
+    section.topzone span.info i {
+      border:1px solid lighten($color-value, 5%);
+    }
+    section.infozone {
+      background-color: lighten($color-value, 45%);;
+      div.box {
+        h5, dl dd, div.order_box {
+          color: $color-value;
+        }
+        div.order_box ul {
+          border:1px solid lighten($color-value, 5%);
+        }
+        h5 em {
+          border-top:1px solid $color-value;
+        }
+      }		
+    }
+  } 
+  %font_color_#{$val} {   
+    color:$color-value;//$color-value:폰트컬러속성값
+  } 
+  %bg_color_#{$val} {
+    background-color:$color-value;//$color-value:배경컬러속성값
+  } 
+  %border_color_#{$val} { 
+    border-color:$color-value;//$color-value:border컬러속성값
+  } 
+  %event_wrap_set_#{$val} { 
+    dl {			
+      &.dl-100 dt i {
+        color: $color-value;
+        @include breakpoint(small) { border-top:1px solid lighten($color-value,10%); }
+      }
+    }	
+    section.topzone {
+      background-color: $color-value;
+      color: #FFF;
+      span.info {
+        background-color: darken($color-value, 28%);
+        color:#FFF;
+      }
+      span.copy_s1 { 
+
+      }
+      h1 {
+        em {
+
+        }
+      }			
+      span.copy_s2 { 
+        strong {
+
+        }
+      }
+      dl.date {
+        dt {
+          background-color: $color-value;
+        }
+        dd {
+
+        }
+      }
+    }	
+    section.explainzone {
+      div.box1, div.box2 {
+        p {
+          color:#FFF;
+        }
+        h4 {
+          color:rgba(254, 234, 100, 1);
+        }
+        div.link_wrap {
+          a.btn_go1 {
+            background-color: #FFF;
+            border:1px solid darken($color-value, 5%);
+            cursor: pointer;
+            span, i {
+              color:$color-value;
+            }
+            &:hover {
+              background-color:lighten($color-value, 20%);
+              border-color: lighten($color-value, 5%);
+              span, i {
+                color: darken($color-value, 15%);
+              }
+            }
+          }
+        }				
+      }
+      div.box1 {
+        background-color: $color-value;
+        h4 {
+
+        }
+      }
+      div.box2 {
+        background-color:  lighten($color-value, 5%);
+        span.icon-point {
+          color:rgba(254, 234, 100, 1);
+        }
+      }
+    }
+    section.imagezone {
+      div.box1 {
+        background-color: #FFF;
+      }
+      div.box2 {
+        background-color: #f4f4f4;
+      }
+    }
+    section.infozone {
+      div.box {
+        h5 {
+        }
+        dl {
+          dt {
+
+          }
+          dd {
+          }
+        }
+        div.link_wrap {
+          a.btn_go1 {
+            cursor: pointer;
+            span, i {
+            }
+          }
+        }
+        div.order_box {
+          ul {
+            border:1px solid lighten($color-value,10%);
+            li {
+              a.btn_lec {
+                background-color: $color-value;
+                border: 1px solid darken($color-value,5%);
+                cursor: pointer;
+                span, i {
+                  color: #FFF;
+                }
+                &:hover {
+                  background-color: darken($color-value, 15%);
+                  border-color: darken($color-value, 10%); 
+                }
+
+              }
+            }
+          }
+        }
+        div.scroll_wrap {
+          table.order_col {
+            caption {
+
+            }
+            thead {
+              tr {
+                th{
+                  &.tit {
+
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td{	
+                  &.tit {
+                    span.lec_tit {
+                      em {
+                        
+                      }
+                    }
+                    dl.lec_dl {
+                      dt {
+
+                      }
+                      dd {
+
+                      }
+                    }
+                  }
+                  span.mprice3 {
+                    em {
+
+                    }
+                  }
+                  span.mprice2 {
+                    
+                  }
+                  span.mprice1 {
+
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  } 
+ }
+@mixin color-list($value-color...) {
+        @each $colors in $value-color {
+          @include make-colors(nth($colors,1),nth($colors,2));
+        }
+}
