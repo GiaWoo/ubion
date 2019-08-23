@@ -362,9 +362,7 @@ body {
           @media (min-width: 1201px) and (max-width: 1500px) {
             .wrap header nav.navbar .navbar-collapse div.down_box a.down_btn span {
               display: none; } }
-  .wrap section.section {
-    position: relative;
-    overflow: hidden; }
+  .wrap section.section { }
   .wrap section .inner {
     text-align: center;
     width: 1200px;
