@@ -5,10 +5,9 @@ $(function() {
       interstitialSection:".footer",
       offset: 0,
       scrollbars:false,
-      overflowscroll: true,
       standardScrollElements: "",
       updateHash: true,
-      touchScroll: true,
+      touchScroll: false,
       easing: "easeOutExpo",
       scrollSpeed: 800,
       before:function(i,panels) {
@@ -54,6 +53,27 @@ $(function() {
       }
     });
     $('.owl-carousel').owlCarousel({
+        items : 3,
+        stagePadding: 50,
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+    $('.partner-carousel').owlCarousel({
+        items : 4,
+        stopOnHover : false,
+        navigation : true,
         stagePadding: 50,
         loop:true,
         margin:10,
