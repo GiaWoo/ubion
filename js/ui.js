@@ -53,27 +53,26 @@ $(function() {
       }
     });
     $('.owl-carousel').owlCarousel({
-        items : 3,
         stagePadding: 50,
         loop:true,
-        margin:10,
+        margin:1,
         nav:true,
-        responsive:{
-            0:{
+        responsiveClass:true,
+        responsive : {
+            0 : {
                 items:1
             },
-            600:{
-                items:3
+            768 : {
+                items:2
             },
-            1000:{
-                items:5
+            1200 : {
+                items:3
             }
         }
     });
     $('.partner-carousel').owlCarousel({
         items : 4,
         stopOnHover : false,
-        navigation : true,
         stagePadding: 50,
         loop:true,
         margin:10,
@@ -91,5 +90,3 @@ $(function() {
         }
     });
 });
-
-  
