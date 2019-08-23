@@ -5,9 +5,10 @@ $(function() {
       interstitialSection:".footer",
       offset: 0,
       scrollbars:false,
+      overflowscroll: true,
       standardScrollElements: "",
       updateHash: true,
-      touchScroll: false,
+      touchScroll: true,
       easing: "easeOutExpo",
       scrollSpeed: 800,
       before:function(i,panels) {
