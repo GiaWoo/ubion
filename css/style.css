@@ -431,6 +431,7 @@ body {
     margin-bottom: 50px;
     text-align: center;
     padding: 5px 10px 7px;
+    z-index: 99;
     -webkit-border-radius: 50px;
     border-radius: 50px;
     background-clip: padding-box;
