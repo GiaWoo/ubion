@@ -2,17 +2,23 @@
 /*_mixins.scss*/
 
 @mixin breakpoint($point) {
-  @if $point == large {
+  @if $point == laptop {
+    @media (min-width:1201px) and (max-width:1500px) { @content; }
+  }
+  @else if $point == large {
     @media (max-width: 1200px) { @content; }
+    //높은 해상도의 데스크탑, 노트북 - 와이드 스크린
   }
   @else if $point == medium {
     @media (max-width: 768px) { @content; }
+    //일반 태블릿(아이패드)의 세로 모드
   }
   @else if $point == small {
     @media (max-width: 576px)  { @content; }
   }
-  @else if $point == v_small {
+  @else if $point == tiny {
     @media (max-width: 320px)  { @content; }
+    //스마트폰과 같은 소형 스크린 Portrait (세로) 모드
   }
 }
 
