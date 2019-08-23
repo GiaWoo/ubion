@@ -52,9 +52,12 @@ $(function() {
         header.addClass('fixed');
       }
     });
-    $('.owl-carousel').owlCarousel({
-        stagePadding: 50,
+    $('.sub1 .owl-carousel').owlCarousel({
+        stagePadding: 0,
         loop:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
         margin:1,
         nav:true,
         responsiveClass:true,
@@ -70,22 +73,24 @@ $(function() {
             }
         }
     });
-    $('.partner-carousel').owlCarousel({
-        items : 4,
-        stopOnHover : false,
-        stagePadding: 50,
+    $('.footer .owl-carousel').owlCarousel({
+        stagePadding: 60,
         loop:true,
-        margin:10,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        margin:40,
         nav:true,
-        responsive:{
-            0:{
+        responsiveClass:true,
+        responsive : {
+            0 : {
                 items:1
             },
-            600:{
-                items:3
+            768 : {
+                items:2
             },
-            1000:{
-                items:5
+            1200 : {
+                items:4
             }
         }
     });
