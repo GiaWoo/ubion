@@ -239,7 +239,7 @@ body {
         padding: 1% 2%;
         background: #111;
         /* The Fallback */
-        background: rgba(17, 17, 17, 0.6);
+        background: rgba(17, 17, 17, 0.8);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
   .wrap header nav {
     width: 100%; }
@@ -421,14 +421,16 @@ body {
     position: absolute;
     -webkit-animation: 0.6s balloon ease-in-out infinite alternate;
     animation: 0.6s balloon ease-in-out infinite alternate;
-    background: #111;
+    background: #aaa;
     /* The Fallback */
-    background: rgba(17, 17, 17, 0.1);
+    background: rgba(170, 170, 170, 0.1);
     left: 50%;
     bottom: 0;
-    margin-left: -55px;
+    width: 128px;
+    margin-left: -64px;
     margin-bottom: 50px;
-    padding: 5px 15px 7px 15px;
+    text-align: center;
+    padding: 5px 10px 7px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
     background-clip: padding-box;
@@ -436,6 +438,13 @@ body {
     @media (max-width: 1200px) {
       .wrap section .no_pc {
         display: block; } }
+    @media (max-width: 576px) {
+      .wrap section .no_pc {
+        display: block;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-size: 0.78rem;
+        font-family: 'nsB'; } }
     .wrap section .no_pc a {
       text-decoration: none; }
   .wrap section.home {
