@@ -488,15 +488,16 @@ body {
             margin-top: 26%; } }
         @media (max-width: 1200px) {
           .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-            margin-top: 20%;
+            margin-top: 26%;
             font-size: 46px;
             font-size: 2.99rem; } }
         @media (max-width: 576px) {
           .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-            margin-top: 35%;
+            margin-top: 45%;
             padding: 0 1%;
-            font-size: 28px;
-            font-size: 1.82rem; } }
+            font-size: 34px;
+            font-size: 2.21rem;
+            word-break: keep-all; } }
       .wrap section.home .carousel .carousel-inner .carousel-caption p {
         font-size: 20px;
         font-size: 1.3rem;
@@ -513,14 +514,15 @@ body {
             margin-top: 3%; } }
         @media (max-width: 576px) {
           .wrap section.home .carousel .carousel-inner .carousel-caption p {
-            font-size: 13px;
-            font-size: 0.845rem;
+            font-size: 14px;
+            font-size: 0.91rem;
             line-height: 19px;
             line-height: 1.125rem;
             color: #ddd;
             word-break: keep-all;
             width: 80%;
-            margin-left: 10%; }
+            margin-left: 10%;
+            margin-top: 5%; }
             .wrap section.home .carousel .carousel-inner .carousel-caption p br {
               display: none; } }
     .wrap section.home .carousel .car_btn_wrap {
@@ -543,13 +545,13 @@ body {
         @media (max-width: 1200px) {
           .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
             margin: 0;
-            margin-top: 39%; } }
+            margin-top: 45%; } }
         @media (max-width: 768px) {
           .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-            margin-top: 30%; } }
+            margin-top: 34%; } }
         @media (max-width: 576px) {
           .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-            margin-top: 28%; } }
+            margin-top: 38%; } }
         .wrap section.home .carousel .car_btn_wrap .carousel-indicators li {
           width: 5px;
           height: 5px;
@@ -590,12 +592,27 @@ body {
           .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
             display: none; } }
     .wrap section.home video {
+      position: relative;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
       -o-object-fit: fill;
       object-fit: fill; }
+      .wrap section.home video i {
+        position: absolute;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        *display: inline;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        /* The Fallback */
+        background: rgba(17, 17, 17, 0.4); }
     .wrap section.home .btn_box {
       display: inline-block;
       position: absolute;
@@ -603,7 +620,8 @@ body {
       left: 50%;
       font-size: 20px;
       margin-left: -50px;
-      /*박스 width값 반값집어넣으면대 -로 */ }
+      /*박스 width값 반값집어넣으면대 -로 */
+      z-index: 999; }
       .wrap section.home .btn_box .scroll_icon {
         color: #fff; }
   .wrap section.sub1 .inner .owl-carousel::-webkit-scrollbar {
@@ -646,8 +664,9 @@ body {
             background: #0c4da2; } }
       @media (max-width: 768px) {
         .wrap section.sub1 .inner .owl-carousel div.bg1 {
-          background: #eceae7;
-          border-radius: 10px; } }
+          background: #fff url(../img/lean_bg.png) repeat top left;
+          border-radius: 10px;
+          border: 1px solid #f1f1f1; } }
     .wrap section.sub1 .inner .owl-carousel div.bg2 {
       background: #fff url(../img/sec1_icon02.png) no-repeat center 10%; }
       .wrap section.sub1 .inner .owl-carousel div.bg2:hover {
@@ -660,8 +679,9 @@ body {
             background: #0c4da2; } }
       @media (max-width: 768px) {
         .wrap section.sub1 .inner .owl-carousel div.bg2 {
-          background: #eceae7;
-          border-radius: 10px; } }
+          background: #fff url(../img/lean_bg.png) repeat top left;
+          border-radius: 10px;
+          border: 1px solid #f1f1f1; } }
     .wrap section.sub1 .inner .owl-carousel div.bg3 {
       background: #fff url(../img/sec1_icon03.png) no-repeat center 10%; }
       .wrap section.sub1 .inner .owl-carousel div.bg3:hover {
@@ -674,8 +694,9 @@ body {
             background: #0c4da2; } }
       @media (max-width: 768px) {
         .wrap section.sub1 .inner .owl-carousel div.bg3 {
-          background: #eceae7;
-          border-radius: 10px; } }
+          background: #fff url(../img/lean_bg.png) repeat top left;
+          border-radius: 10px;
+          border: 1px solid #f1f1f1; } }
     .wrap section.sub1 .inner .owl-carousel div.bg4 {
       background: #fff url(../img/sec1_icon04.png) no-repeat center 10%; }
       .wrap section.sub1 .inner .owl-carousel div.bg4:hover {
@@ -688,8 +709,9 @@ body {
             background: #0c4da2; } }
       @media (max-width: 768px) {
         .wrap section.sub1 .inner .owl-carousel div.bg4 {
-          background: #eceae7;
-          border-radius: 10px; } }
+          background: #fff url(../img/lean_bg.png) repeat top left;
+          border-radius: 10px;
+          border: 1px solid #f1f1f1; } }
     .wrap section.sub1 .inner .owl-carousel div.bg5 {
       background: #fff url(../img/sec1_icon05.png) no-repeat center 10%; }
       .wrap section.sub1 .inner .owl-carousel div.bg5:hover {
@@ -702,8 +724,9 @@ body {
             background: #0c4da2; } }
       @media (max-width: 768px) {
         .wrap section.sub1 .inner .owl-carousel div.bg5 {
-          background: #eceae7;
-          border-radius: 10px; } }
+          background: #fff url(../img/lean_bg.png) repeat top left;
+          border-radius: 10px;
+          border: 1px solid #f1f1f1; } }
     .wrap section.sub1 .inner .owl-carousel div i {
       display: -moz-inline-stack;
       display: inline-block;
@@ -766,6 +789,12 @@ body {
     left: 0;
     margin-top: -80px;
     height: 90px; }
+    @media (max-width: 576px) {
+      .wrap section.sub1 .inner .owl-carousel .owl-nav {
+        margin-top: 0;
+        height: -30px;
+        opacity: 0.3;
+        filter: alpha(opacity=30); } }
     .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev {
       background: rgba(1, 1, 1, 0.2) url(../img/arrow_thin_l.png) no-repeat 40% 46%;
       float: left;
