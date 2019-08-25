@@ -5,11 +5,12 @@ $(function() {
       interstitialSection:".footer",
       offset: 0,
       scrollbars:false,
+      overflowScroll:true,
+      touchScroll: true,
       standardScrollElements: "",
       updateHash: true,
-      touchScroll: false,
       easing: "easeOutExpo",
-      scrollSpeed: 800,
+      scrollSpeed: 1000,
       before:function(i,panels) {
         var ref = panels[i].attr("data-section-name");
         $(".navbar-nav .active").removeClass("active");
