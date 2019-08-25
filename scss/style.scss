@@ -309,6 +309,7 @@ body {
 			}
 		
 		}
+
 		//home
 		&.home {
 			background: #000;
@@ -586,7 +587,7 @@ body {
 		//sub1
 		&.sub1{
 			@extend %bg_color_co_white;
-			@include clearfix();
+			@include clearfix;
 			height: auto;
 			.inner {
 				.tit_wrap {
