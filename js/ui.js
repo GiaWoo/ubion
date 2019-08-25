@@ -5,7 +5,7 @@ $(function() {
       interstitialSection:".footer",
       offset: 0,
       scrollbars:false,
-      overflowScroll:true,
+      overflowScroll:false,
       touchScroll: true,
       standardScrollElements: "",
       updateHash: true,
