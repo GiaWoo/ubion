@@ -230,9 +230,11 @@ body {
     .wrap header.header .navbar-toggler {
       background: #fff;
       /* The Fallback */
-      background: rgba(255, 255, 255, 0.1); }
+      background: rgba(255, 255, 255, 0.1);
+      padding: .25rem .5rem; }
       .wrap header.header .navbar-toggler .navbar-toggler-icon {
-        color: #fff; }
+        background: url(../img/nav_bg.png) no-repeat top left;
+        background-size: contain; }
   .wrap header.fixed {
     background: none;
     border: none;
