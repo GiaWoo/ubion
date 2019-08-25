@@ -64,7 +64,9 @@ $(function() {
         responsiveClass:true,
         responsive : {
             0 : {
-                items:1
+                items:1,
+                stagePadding:40,
+                margin:4,
             },
             768 : {
                 items:2
