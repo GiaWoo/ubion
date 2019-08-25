@@ -66,7 +66,7 @@ $(function() {
             0 : {
                 items:1,
                 stagePadding:40,
-                margin:4,
+                margin:42,
             },
             768 : {
                 items:2
