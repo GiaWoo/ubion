@@ -107,9 +107,8 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			@include breakpoint(small) {
-				background: #fff;
-			}
+			@include opacity-bg(#111, 0.4);
+			border-bottom: 1px solid rgba(255,255,255,0.1);
 			.sm_logo {
 				display: block;
 			}
@@ -119,8 +118,7 @@ body {
 			}
 			@include breakpoint(large) {
 				padding: 0;
-				@include opacity-bg(#111, 0.8);
-				border-bottom: 1px solid rgba(255,255,255,0.1);
+				@include opacity-bg(#111, 0.7);
 			}
 		}
 		nav {
@@ -156,6 +154,12 @@ body {
 								}
 								@include breakpoint(large) {
 									@include font-size(14);
+								}
+								@include breakpoint(medium) {
+									padding: 2% 0;
+								}
+								@include breakpoint(small) {
+									padding: 3% 0;
 								}
 								i {
 									position: absolute;
@@ -238,6 +242,10 @@ body {
 							border: 1px solid #888;
 							color: #999;
 							transition: .3s;
+						}
+						@include breakpoint(medium) {
+							border: 1px solid #888;
+							color: #999;
 						}
 						span {
 							//padding-left: 25px;
@@ -324,10 +332,10 @@ body {
 						background-repeat: repeat;
 						background-size: cover;
 						&.bg1 {
-							background-image: url(../img/bg3.jpg);
+							background-image: url(../img/bg2.jpg);
 						}
 						&.bg2 {
-							background-image: url(../img/bg2.jpg);
+							background-image: url(../img/bg3.jpg);
 						}
 						&.bg3 {
 							background-image: url(../img/bg1.jpg);
@@ -355,20 +363,20 @@ body {
 							word-break: keep-all;
 						}
 						@include breakpoint(small) {
-							padding:  0 14%;
+							padding:  0 5%;
 						}
 						h3 {
 							@include font-size(58);
 							@extend %font_color_co_white;
-							margin-top:39%;
+							margin-top: 26%;
 							font-family: 'nsB';
 							letter-spacing: -0.5px;
 							@include breakpoint(laptop) {
 								@include font-size(50);
-								margin-top:16%;
+								margin-top:23%;
 							}
 							@include breakpoint(large) {
-								margin-top:26%;
+								margin-top:30%;
 								@include font-size(46);
 							}
 							@include breakpoint(medium) {
@@ -387,7 +395,7 @@ body {
 							@include font-size(20);
 							@include line-height(15);
 							@extend %font_color_co_white;
-							margin-top: 4%;
+							margin-top: 1%;
 							font-family: 'nsL';
 							@include breakpoint(large) {
 								@include font-size(16);
@@ -481,19 +489,21 @@ body {
 							position: absolute;
 							left: 0;
 							top: 0;
+							width: 40px;
+							height: 40px;
 							margin-left: 1%;
 							margin-top: 40%;
 						}
 						@include breakpoint(medium) {
 							margin-top: 48%;
-							width: 40px;
-							height: 40px;
 						}
 						@include breakpoint(small) {
+							display: none;
 							margin-top: 54%;
 						}
 					}
 					.carousel-control-next {
+						left: 0;
 						margin-left: 63px;
 						margin-top:65%;
 						width: 60px;
@@ -503,6 +513,7 @@ body {
 							position: absolute;
 							top: 0;
 							right: 0;
+							left: auto;
 							margin-left: 0;
 							margin-right: 1%;
 							margin-top: 30%;
@@ -510,17 +521,19 @@ body {
 						@include breakpoint(large) {
 							position: absolute;
 							top: 0;
+							left: auto;
 							right: 0;
+							width: 40px;
+							height: 40px;
 							margin-left: 0;
 							margin-right: 1%;
 							margin-top: 40%;
 						}
 						@include breakpoint(medium) {
 							margin-top: 48%;
-							width: 40px;
-							height: 40px;
 						}
 						@include breakpoint(small) {
+							display: none;
 							margin-top: 56%;
 						}
 					}
@@ -896,58 +909,62 @@ body {
 						li {
 							height: 270px;
 							padding-right: 0;
+							margin-top:1%;
 							@include breakpoint(medium) {
 								flex: auto;
 								height: auto;
+								margin-top:2%;
 							}
-							&:first-child {
-								margin-top: 0;
-							}
-							dl.conts {
-								width: 100%;
-								height: 100%;
-								padding: 50px 30px;
-								dt.txt {
-									@extend %font_color_co_light_black;
-									@include font-size(20);
-									font-family: 'nsB';
-								}
-								dd {
-									@extend %bg_color_co_beige;
-									@extend %font_color_co_white;
-									@include font-size(14);
-									font-family: 'nsL';
-									margin: 6px auto 0;
-									padding: 7px 2px;
-									width: 60px;
-								}
-							}
-						}
-						&.st1 {
-							li {
-								dl{
-									//@extend %bg_color_co_white;
-									background: #fff url(../img/sec2_icon01.png) no-repeat 29% 60%;
-								}
-								&:nth-child(2n) {
-									dl{
-										//@extend %bg_color_co_light_gray_beige;
-										background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 82%;
+							dl {
+								background: #fff url(../img/sec2_icon01.png) no-repeat 29% 60%;
+									&.conts {
+									width: 100%;
+									height: 100%;
+									padding: 50px 30px;
+									dt.txt {
+										@extend %font_color_co_light_black;
+										@include font-size(20);
+										font-family: 'nsB';
+									}
+									dd {
+										@extend %bg_color_co_beige;
+										@extend %font_color_co_white;
+										@include font-size(14);
+										font-family: 'nsL';
+										margin: 6px auto 0;
+										padding: 7px 2px;
+										width: 60px;
 									}
 								}
 							}
-						}
-						&.st2 {
-							li {
+							&:nth-child(2) {
 								dl {
-									//@extend %bg_color_co_light_gray_beige;
 									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
-								&:nth-child(2n) {
-									dl {
-										//@extend %bg_color_co_white;
-										background: #fff url(../img/sec2_icon01.png) no-repeat 30% 60%;
-									}
+							}
+							&:nth-child(4) {
+								dl {
+									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+								}
+							}
+							&:nth-child(5) {
+								dl {
+									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+								}
+							}
+							&:nth-child(7) {
+								dl {
+									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+								}
+							}
+							&:nth-child(10) {
+								dl {
+									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+								}
+							}
+							&:nth-child(12) {
+								dl {
+									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 						}
