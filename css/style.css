@@ -372,9 +372,11 @@ body {
           .wrap header nav.navbar div.down_box a.down_btn {
             border: 1px solid #888;
             color: #999; } }
-  @media (min-width: 992px) and (max-width: 1280px) {
-    .wrap section.section {
-      width: 100%; } }
+  .wrap section.section {
+    min-height: 900px; }
+    @media (min-width: 992px) and (max-width: 1280px) {
+      .wrap section.section {
+        width: 100%; } }
   .wrap section .inner {
     text-align: center;
     width: 1200px;
@@ -431,8 +433,7 @@ body {
         .wrap section .inner article {
           margin-top: 40px; } }
   .wrap section.home {
-    background: #000;
-    overflow: hidden; }
+    background: #000; }
     .wrap section.home .carousel {
       height: 100%; }
       .wrap section.home .carousel .carousel-inner {
@@ -954,9 +955,11 @@ body {
         .wrap section.sub2 .inner article.course_at ul li:nth-child(12) dl {
           background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
   .wrap section.sub3 {
-    background: url(../img/sub3_bg.jpg) no-repeat top center;
+    position: relative;
+    background-image: url(../img/sub3_bg.jpg);
     background-size: cover;
-    position: relative; }
+    background-position: 50% 50%;
+    background-repeat: repeat; }
     .wrap section.sub3 .inner .tit_wrap .ex_txt {
       font-size: 32px;
       font-size: 2.08rem; }
@@ -1014,12 +1017,36 @@ body {
           display: none; } }
       .wrap section.sub3 div.line_wrap i.line_2 {
         margin-left: -300px; }
+        @media (min-width: 992px) and (max-width: 1280px) {
+          .wrap section.sub3 div.line_wrap i.line_2 {
+            display: none; } }
+        @media (max-width: 991px) {
+          .wrap section.sub3 div.line_wrap i.line_2 {
+            display: none; } }
       .wrap section.sub3 div.line_wrap i.line_3 {
         margin-left: -588px; }
+        @media (min-width: 992px) and (max-width: 1280px) {
+          .wrap section.sub3 div.line_wrap i.line_3 {
+            display: none; } }
+        @media (max-width: 991px) {
+          .wrap section.sub3 div.line_wrap i.line_3 {
+            display: none; } }
       .wrap section.sub3 div.line_wrap i.line_4 {
         margin-left: 300px; }
+        @media (min-width: 992px) and (max-width: 1280px) {
+          .wrap section.sub3 div.line_wrap i.line_4 {
+            display: none; } }
+        @media (max-width: 991px) {
+          .wrap section.sub3 div.line_wrap i.line_4 {
+            display: none; } }
       .wrap section.sub3 div.line_wrap i.line_5 {
         margin-left: 589px; }
+        @media (min-width: 992px) and (max-width: 1280px) {
+          .wrap section.sub3 div.line_wrap i.line_5 {
+            display: none; } }
+        @media (max-width: 991px) {
+          .wrap section.sub3 div.line_wrap i.line_5 {
+            display: none; } }
   .wrap section.sub4 .inner article.partner_at ul.review_wrap:after {
     content: '';
     display: block;
