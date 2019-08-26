@@ -647,9 +647,9 @@ body {
 							}
 						}
 						&.bg1 {
-							background: #fff url(../img/sec1_icon01.png) no-repeat center 10%;
+							background: #fff url(../img/sec1_icon01.png) no-repeat 52% 10%;
 							&:hover {
-								background: #0c4da2 url(../img/sec1_icon01_hover.png) no-repeat center 10%;
+								background: #0c4da2 url(../img/sec1_icon01_hover.png) no-repeat 52% 10%;
 								-webkit-transition: all 0.5s;
 								-o-transition: all 0.5s;
 								transition: all 0.5s;
@@ -670,9 +670,9 @@ body {
 							}
 						}
 						&.bg2 {
-							background: #fff url(../img/sec1_icon02.png) no-repeat center 10%;
+							background: #fff url(../img/sec1_icon02.png) no-repeat 52% 10%;
 							&:hover {
-								background: #0c4da2 url(../img/sec1_icon02_hover.png) no-repeat center 10%;
+								background: #0c4da2 url(../img/sec1_icon02_hover.png) no-repeat 52% 10%;
 								-webkit-transition: all 0.5s;
 								-o-transition: all 0.5s;
 								transition: all 0.5s;
@@ -910,6 +910,9 @@ body {
 							height: 270px;
 							padding-right: 0;
 							margin-top:1%;
+							@include breakpoint(large) {
+								padding: 0 6px;
+							}
 							@include breakpoint(medium) {
 								flex: auto;
 								height: auto;
@@ -937,12 +940,32 @@ body {
 									}
 								}
 							}
+							&:nth-child(1) {
+								margin-top:0;
+							}
 							&:nth-child(2) {
+								margin-top:0;
+								@include breakpoint(small) {
+									margin-top: 2%;
+								}
 								dl {
 									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
+							&:nth-child(3) {
+								margin-top:0;
+								@include breakpoint(medium) {
+									margin-top: 2%;
+								}
+							}
 							&:nth-child(4) {
+								margin-top:0;
+								@include breakpoint(large) {
+									margin-top: 1%;
+								}
+								@include breakpoint(medium) {
+									margin-top: 2%;
+								}
 								dl {
 									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
