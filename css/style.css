@@ -701,7 +701,7 @@ body {
       .wrap section.home .scroll_btn a {
         text-decoration: none; }
   .wrap section.sub1 {
-    height: auto; }
+    height: 100%; }
     .wrap section.sub1:after {
       content: '';
       display: block;
