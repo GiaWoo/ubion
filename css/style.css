@@ -457,46 +457,39 @@ body {
             .wrap section.home .carousel .carousel-inner .carousel-caption {
               left: 0;
               margin-left: 0;
-              text-align: center; } }
+              padding: 0 2%; } }
           @media (max-width: 991px) {
             .wrap section.home .carousel .carousel-inner .carousel-caption {
               width: 100%;
               left: 0;
               margin-left: 0;
-              text-align: center; } }
+              padding: 0 2%; } }
           @media (max-width: 767px) {
             .wrap section.home .carousel .carousel-inner .carousel-caption {
-              padding: 0 12%;
               word-break: keep-all; } }
-          @media (max-width: 575px) {
-            .wrap section.home .carousel .carousel-inner .carousel-caption {
-              padding: 0 5%; } }
           .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
             font-size: 58px;
             font-size: 3.77rem;
-            margin-top: 26%;
+            margin-top: 460px;
             font-family: 'nsB';
-            letter-spacing: -0.5px; }
+            letter-spacing: -1px; }
             @media (min-width: 992px) and (max-width: 1280px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
                 font-size: 50px;
                 font-size: 3.25rem;
-                margin-top: 23%; } }
+                margin-top: 300px; } }
             @media (max-width: 991px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-                margin-top: 30%;
                 font-size: 46px;
                 font-size: 2.99rem; } }
             @media (max-width: 767px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-                margin-top: 43%;
-                font-size: 40px;
-                font-size: 2.6rem; } }
+                font-size: 42px;
+                font-size: 2.73rem; } }
             @media (max-width: 575px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-                margin-top: 60%;
-                font-size: 30px;
-                font-size: 1.95rem; } }
+                font-size: 36px;
+                font-size: 2.34rem; } }
           .wrap section.home .carousel .carousel-inner .carousel-caption p {
             font-size: 20px;
             font-size: 1.3rem;
@@ -518,19 +511,20 @@ body {
                 line-height: 20px;
                 line-height: 1.25rem;
                 color: #ddd;
-                margin-top: 5%; }
+                margin-top: 5%;
+                width: 80%; }
                 .wrap section.home .carousel .carousel-inner .carousel-caption p br {
                   display: none; } }
             @media (max-width: 575px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption p {
                 font-size: 14px;
                 font-size: 0.91rem;
-                line-height: 19px;
-                line-height: 1.125rem; } }
+                line-height: 20px;
+                line-height: 1.25rem; } }
       .wrap section.home .carousel .car_btn_wrap {
         position: absolute;
         width: 1200px;
-        top: 0;
+        top: 77%;
         left: 50%;
         margin-left: -600px;
         height: 100%;
@@ -538,33 +532,26 @@ body {
         @media (min-width: 992px) and (max-width: 1280px) {
           .wrap section.home .carousel .car_btn_wrap {
             width: 100%;
-            margin: 0 auto;
-            left: 0; } }
+            left: 0;
+            margin-left: 2%;
+            top: 56%; } }
         @media (max-width: 991px) {
           .wrap section.home .carousel .car_btn_wrap {
             width: 100%;
-            margin: 0 auto;
-            left: 0; } }
+            left: 0;
+            margin-left: 2%;
+            top: 72%; } }
         .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
           position: relative;
           right: 0;
-          margin-top: 69%;
           margin-left: 85%;
-          margin-right: 0; }
-          @media (min-width: 992px) and (max-width: 1280px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-              margin: 0;
-              margin-top: 40%; } }
-          @media (max-width: 991px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-              margin: 0;
-              margin-top: 60%; } }
+          margin-right: 0;
+          margin-top: 40px; }
           @media (max-width: 767px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-              margin-top: 65%; } }
-          @media (max-width: 575px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-              margin-top: 100%; } }
+              right: auto;
+              left: 0;
+              margin-left: 0; } }
           .wrap section.home .carousel .car_btn_wrap .carousel-indicators li {
             width: 5px;
             height: 5px;
@@ -580,67 +567,21 @@ body {
               opacity: 0.7;
               filter: alpha(opacity=70); }
         .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-          margin-top: 65%;
-          width: 60px;
-          height: 60px;
+          width: 50px;
+          height: 50px;
           border: 1px solid #fff; }
-          @media (min-width: 992px) and (max-width: 1280px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-              position: absolute;
-              left: 0;
-              top: 0;
-              margin-left: 1%;
-              margin-top: 30%; } }
-          @media (max-width: 991px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 40px;
-              height: 40px;
-              margin-left: 1%;
-              margin-top: 40%; } }
           @media (max-width: 767px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-              margin-top: 48%; } }
-          @media (max-width: 575px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-              display: none;
-              margin-top: 54%; } }
+              display: none; } }
         .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
           left: 0;
-          margin-left: 63px;
-          margin-top: 65%;
-          width: 60px;
-          height: 60px;
+          margin-left: 53px;
+          width: 50px;
+          height: 50px;
           border: 1px solid #fff; }
-          @media (min-width: 992px) and (max-width: 1280px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
-              position: absolute;
-              top: 0;
-              right: 0;
-              left: auto;
-              margin-left: 0;
-              margin-right: 1%;
-              margin-top: 30%; } }
-          @media (max-width: 991px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
-              position: absolute;
-              top: 0;
-              left: auto;
-              right: 0;
-              width: 40px;
-              height: 40px;
-              margin-left: 0;
-              margin-right: 1%;
-              margin-top: 40%; } }
           @media (max-width: 767px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
-              margin-top: 48%; } }
-          @media (max-width: 575px) {
-            .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
-              display: none;
-              margin-top: 56%; } }
+              display: none; } }
     .wrap section.home video {
       position: relative;
       width: 100%;
