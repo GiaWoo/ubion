@@ -287,7 +287,7 @@ body {
             padding: 2% 0; } }
         @media (max-width: 576px) {
           .wrap header nav.navbar .navbar-collapse .navbar-nav li a {
-            padding: 3% 0; } }
+            padding: 4% 0; } }
         .wrap header nav.navbar .navbar-collapse .navbar-nav li a i {
           position: absolute;
           bottom: 0;
