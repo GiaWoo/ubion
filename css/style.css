@@ -240,9 +240,6 @@ body {
     background: none;
     border: none;
     padding: 0;
-    background: #111;
-    /* The Fallback */
-    background: rgba(17, 17, 17, 0.4);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .wrap header.fixed .sm_logo {
       display: block; }
@@ -660,7 +657,8 @@ body {
       .wrap section.sub1 {
         min-height: auto; } }
     .wrap section.sub1 .inner .owl-carousel div {
-      height: 100%; }
+      height: 100%;
+      cursor: pointer; }
       .wrap section.sub1 .inner .owl-carousel div.item {
         height: 500px;
         width: 100%;
