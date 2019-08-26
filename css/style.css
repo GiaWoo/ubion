@@ -463,7 +463,7 @@ body {
               width: 100%;
               left: 0;
               margin-left: 0;
-              padding: 0 2%; } }
+              padding: 0 3%; } }
           @media (max-width: 767px) {
             .wrap section.home .carousel .carousel-inner .carousel-caption {
               word-break: keep-all; } }
@@ -481,7 +481,8 @@ body {
             @media (max-width: 991px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
                 font-size: 46px;
-                font-size: 2.99rem; } }
+                font-size: 2.99rem;
+                margin-top: 400px; } }
             @media (max-width: 767px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
                 font-size: 42px;
@@ -534,13 +535,13 @@ body {
             width: 100%;
             left: 0;
             margin-left: 2%;
-            top: 56%; } }
+            top: 520px; } }
         @media (max-width: 991px) {
           .wrap section.home .carousel .car_btn_wrap {
             width: 100%;
             left: 0;
-            margin-left: 2%;
-            top: 72%; } }
+            margin-left: 3%;
+            top: 620px; } }
         .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
           position: relative;
           right: 0;
@@ -549,9 +550,9 @@ body {
           margin-top: 40px; }
           @media (max-width: 767px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-indicators {
-              right: auto;
-              left: 0;
-              margin-left: 0; } }
+              margin-left: 0;
+              float: left;
+              margin-top: 0; } }
           .wrap section.home .carousel .car_btn_wrap .carousel-indicators li {
             width: 5px;
             height: 5px;
