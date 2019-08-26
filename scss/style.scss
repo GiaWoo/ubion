@@ -107,7 +107,7 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			@include opacity-bg(#111, 0.4);
+			//@include opacity-bg(#111, 0.4);
 			border-bottom: 1px solid rgba(255,255,255,0.1);
 			.sm_logo {
 				display: block;
@@ -577,6 +577,7 @@ body {
 				.owl-carousel {
 					div {
 						height: 100%;
+						cursor: pointer;
 						&.item {
 							height: 500px;
 							width: 100%;
