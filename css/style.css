@@ -372,11 +372,9 @@ body {
           .wrap header nav.navbar div.down_box a.down_btn {
             border: 1px solid #888;
             color: #999; } }
-  .wrap section.section {
-    min-height: 900px; }
-    @media (min-width: 992px) and (max-width: 1280px) {
-      .wrap section.section {
-        width: 100%; } }
+  @media (min-width: 992px) and (max-width: 1280px) {
+    .wrap section.section {
+      width: 100%; } }
   .wrap section .inner {
     text-align: center;
     width: 1200px;
@@ -698,178 +696,183 @@ body {
         text-decoration: none; }
       .wrap section.home .btn_box .scroll_icon {
         color: #fff; }
-  .wrap section.sub1:after {
-    content: '';
-    display: block;
-    clear: both; }
-  .wrap section.sub1 .inner .owl-carousel div {
-    height: 100%; }
-    .wrap section.sub1 .inner .owl-carousel div.item {
-      height: 500px;
-      width: 100%;
-      padding: 220px 30px 40px; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.item {
-          height: auto;
-          min-height: 340px;
-          padding: 10% 5%; } }
-    .wrap section.sub1 .inner .owl-carousel div.bg1 {
-      background: #fff url(../img/sec1_icon01.png) no-repeat 52% 10%; }
-      .wrap section.sub1 .inner .owl-carousel div.bg1:hover {
-        background: #0c4da2 url(../img/sec1_icon01_hover.png) no-repeat 52% 10%; }
+  .wrap section.sub1 {
+    min-height: 900px; }
+    .wrap section.sub1:after {
+      content: '';
+      display: block;
+      clear: both; }
+    @media (max-width: 767px) {
+      .wrap section.sub1 {
+        min-height: auto; } }
+    .wrap section.sub1 .inner .owl-carousel div {
+      height: 100%; }
+      .wrap section.sub1 .inner .owl-carousel div.item {
+        height: 500px;
+        width: 100%;
+        padding: 220px 30px 40px; }
         @media (max-width: 767px) {
-          .wrap section.sub1 .inner .owl-carousel div.bg1:hover {
-            background: #0c4da2; } }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.bg1 {
-          background: #fff url(../img/lean_bg.png) repeat top left;
-          border-radius: 10px;
-          border: 1px solid #f1f1f1; } }
-    .wrap section.sub1 .inner .owl-carousel div.bg2 {
-      background: #fff url(../img/sec1_icon02.png) no-repeat 52% 10%; }
-      .wrap section.sub1 .inner .owl-carousel div.bg2:hover {
-        background: #0c4da2 url(../img/sec1_icon02_hover.png) no-repeat 52% 10%; }
+          .wrap section.sub1 .inner .owl-carousel div.item {
+            height: auto;
+            min-height: 340px;
+            padding: 10% 5%; } }
+      .wrap section.sub1 .inner .owl-carousel div.bg1 {
+        background: #fff url(../img/sec1_icon01.png) no-repeat 52% 10%; }
+        .wrap section.sub1 .inner .owl-carousel div.bg1:hover {
+          background: #0c4da2 url(../img/sec1_icon01_hover.png) no-repeat 52% 10%; }
+          @media (max-width: 767px) {
+            .wrap section.sub1 .inner .owl-carousel div.bg1:hover {
+              background: #0c4da2; } }
         @media (max-width: 767px) {
-          .wrap section.sub1 .inner .owl-carousel div.bg2:hover {
-            background: #0c4da2; } }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.bg2 {
-          background: #fff url(../img/lean_bg.png) repeat top left;
-          border-radius: 10px;
-          border: 1px solid #f1f1f1; } }
-    .wrap section.sub1 .inner .owl-carousel div.bg3 {
-      background: #fff url(../img/sec1_icon03.png) no-repeat center 10%; }
-      .wrap section.sub1 .inner .owl-carousel div.bg3:hover {
-        background: #0c4da2 url(../img/sec1_icon03_hover.png) no-repeat center 10%; }
+          .wrap section.sub1 .inner .owl-carousel div.bg1 {
+            background: #fff url(../img/lean_bg.png) repeat top left;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1; } }
+      .wrap section.sub1 .inner .owl-carousel div.bg2 {
+        background: #fff url(../img/sec1_icon02.png) no-repeat 52% 10%; }
+        .wrap section.sub1 .inner .owl-carousel div.bg2:hover {
+          background: #0c4da2 url(../img/sec1_icon02_hover.png) no-repeat 52% 10%; }
+          @media (max-width: 767px) {
+            .wrap section.sub1 .inner .owl-carousel div.bg2:hover {
+              background: #0c4da2; } }
         @media (max-width: 767px) {
-          .wrap section.sub1 .inner .owl-carousel div.bg3:hover {
-            background: #0c4da2; } }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.bg3 {
-          background: #fff url(../img/lean_bg.png) repeat top left;
-          border-radius: 10px;
-          border: 1px solid #f1f1f1; } }
-    .wrap section.sub1 .inner .owl-carousel div.bg4 {
-      background: #fff url(../img/sec1_icon04.png) no-repeat center 10%; }
-      .wrap section.sub1 .inner .owl-carousel div.bg4:hover {
-        background: #0c4da2 url(../img/sec1_icon04_hover.png) no-repeat center 10%; }
+          .wrap section.sub1 .inner .owl-carousel div.bg2 {
+            background: #fff url(../img/lean_bg.png) repeat top left;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1; } }
+      .wrap section.sub1 .inner .owl-carousel div.bg3 {
+        background: #fff url(../img/sec1_icon03.png) no-repeat center 10%; }
+        .wrap section.sub1 .inner .owl-carousel div.bg3:hover {
+          background: #0c4da2 url(../img/sec1_icon03_hover.png) no-repeat center 10%; }
+          @media (max-width: 767px) {
+            .wrap section.sub1 .inner .owl-carousel div.bg3:hover {
+              background: #0c4da2; } }
         @media (max-width: 767px) {
-          .wrap section.sub1 .inner .owl-carousel div.bg4:hover {
-            background: #0c4da2; } }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.bg4 {
-          background: #fff url(../img/lean_bg.png) repeat top left;
-          border-radius: 10px;
-          border: 1px solid #f1f1f1; } }
-    .wrap section.sub1 .inner .owl-carousel div.bg5 {
-      background: #fff url(../img/sec1_icon05.png) no-repeat center 10%; }
-      .wrap section.sub1 .inner .owl-carousel div.bg5:hover {
-        background: #0c4da2 url(../img/sec1_icon05_hover.png) no-repeat center 10%; }
+          .wrap section.sub1 .inner .owl-carousel div.bg3 {
+            background: #fff url(../img/lean_bg.png) repeat top left;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1; } }
+      .wrap section.sub1 .inner .owl-carousel div.bg4 {
+        background: #fff url(../img/sec1_icon04.png) no-repeat center 10%; }
+        .wrap section.sub1 .inner .owl-carousel div.bg4:hover {
+          background: #0c4da2 url(../img/sec1_icon04_hover.png) no-repeat center 10%; }
+          @media (max-width: 767px) {
+            .wrap section.sub1 .inner .owl-carousel div.bg4:hover {
+              background: #0c4da2; } }
         @media (max-width: 767px) {
-          .wrap section.sub1 .inner .owl-carousel div.bg5:hover {
-            background: #0c4da2; } }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div.bg5 {
-          background: #fff url(../img/lean_bg.png) repeat top left;
-          border-radius: 10px;
-          border: 1px solid #f1f1f1; } }
-    .wrap section.sub1 .inner .owl-carousel div i {
-      display: -moz-inline-stack;
-      display: inline-block;
-      vertical-align: top;
-      zoom: 1;
-      *display: inline;
-      background: #ccc;
-      height: 1px;
-      width: 60px; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div i {
-          display: none; } }
-    .wrap section.sub1 .inner .owl-carousel div h3 {
-      font-size: 30px;
-      font-size: 1.95rem;
-      margin-top: 10px; }
-      .wrap section.sub1 .inner .owl-carousel div h3 span {
-        font-size: 12px;
-        font-size: 0.78rem; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div h3 {
-          font-size: 20px;
-          font-size: 1.3rem;
-          font-family: 'nsB';
-          word-break: keep-all; } }
-    .wrap section.sub1 .inner .owl-carousel div p {
-      margin-top: 30px;
-      font-size: 16px;
-      font-size: 1.04rem;
-      line-height: 23px;
-      line-height: 1.625rem;
-      letter-spacing: -0.5px; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel div p {
+          .wrap section.sub1 .inner .owl-carousel div.bg4 {
+            background: #fff url(../img/lean_bg.png) repeat top left;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1; } }
+      .wrap section.sub1 .inner .owl-carousel div.bg5 {
+        background: #fff url(../img/sec1_icon05.png) no-repeat center 10%; }
+        .wrap section.sub1 .inner .owl-carousel div.bg5:hover {
+          background: #0c4da2 url(../img/sec1_icon05_hover.png) no-repeat center 10%; }
+          @media (max-width: 767px) {
+            .wrap section.sub1 .inner .owl-carousel div.bg5:hover {
+              background: #0c4da2; } }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel div.bg5 {
+            background: #fff url(../img/lean_bg.png) repeat top left;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1; } }
+      .wrap section.sub1 .inner .owl-carousel div i {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        *display: inline;
+        background: #ccc;
+        height: 1px;
+        width: 60px; }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel div i {
+            display: none; } }
+      .wrap section.sub1 .inner .owl-carousel div h3 {
+        font-size: 30px;
+        font-size: 1.95rem;
+        margin-top: 10px; }
+        .wrap section.sub1 .inner .owl-carousel div h3 span {
+          font-size: 12px;
+          font-size: 0.78rem; }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel div h3 {
+            font-size: 20px;
+            font-size: 1.3rem;
+            font-family: 'nsB';
+            word-break: keep-all; } }
+      .wrap section.sub1 .inner .owl-carousel div p {
+        margin-top: 30px;
+        font-size: 16px;
+        font-size: 1.04rem;
+        line-height: 23px;
+        line-height: 1.625rem;
+        letter-spacing: -0.5px; }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel div p {
+            font-size: 14px;
+            font-size: 0.91rem;
+            word-break: keep-all;
+            text-align: left; }
+            .wrap section.sub1 .inner .owl-carousel div p br {
+              display: none; } }
+        .wrap section.sub1 .inner .owl-carousel div p mark {
+          background: none;
+          font-family: 'nsB'; }
+        .wrap section.sub1 .inner .owl-carousel div p em {
+          font-size: 12px;
+          font-size: 0.78rem;
+          line-height: 18px;
+          line-height: 1rem;
+          margin-top: 5px;
+          display: block;
+          color: #aaa; }
+        .wrap section.sub1 .inner .owl-carousel div p a {
           font-size: 14px;
           font-size: 0.91rem;
-          word-break: keep-all;
-          text-align: left; }
-          .wrap section.sub1 .inner .owl-carousel div p br {
-            display: none; } }
-      .wrap section.sub1 .inner .owl-carousel div p mark {
-        background: none;
-        font-family: 'nsB'; }
-      .wrap section.sub1 .inner .owl-carousel div p em {
-        font-size: 12px;
-        font-size: 0.78rem;
-        line-height: 18px;
-        line-height: 1rem;
-        margin-top: 5px;
-        display: block;
-        color: #aaa; }
-      .wrap section.sub1 .inner .owl-carousel div p a {
-        font-size: 14px;
-        font-size: 0.91rem;
-        font-family: 'nsR'; }
-  .wrap section.sub1 .inner .owl-carousel .owl-nav {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -80px;
-    height: 90px; }
-    @media (max-width: 575px) {
-      .wrap section.sub1 .inner .owl-carousel .owl-nav {
-        margin-top: -45px;
-        opacity: 0.3;
-        filter: alpha(opacity=30); } }
-    .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev {
-      background: rgba(1, 1, 1, 0.2) url(../img/arrow_thin_l.png) no-repeat 40% 46%;
-      float: left;
-      width: 35px;
-      height: 90px;
-      border-radius: 0;
-      margin: 0; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev {
-          background: rgba(1, 1, 1, 0.5) url(../img/arrow_thin_l.png) no-repeat 40% 46%; } }
-      .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev:hover {
-        opacity: 0.6;
-        filter: alpha(opacity=60); }
-    .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next {
-      background: rgba(1, 1, 1, 0.2) url(../img/arrow_thin_r.png) no-repeat 55% 46%;
-      float: right;
-      width: 35px;
-      height: 90px;
-      border-radius: 0;
-      margin: 0; }
-      @media (max-width: 767px) {
-        .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next {
-          background: rgba(1, 1, 1, 0.5) url(../img/arrow_thin_r.png) no-repeat 55% 46%; } }
-      .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next:hover {
-        opacity: 0.6;
-        filter: alpha(opacity=60); }
-    .wrap section.sub1 .inner .owl-carousel .owl-nav span {
+          font-family: 'nsR'; }
+    .wrap section.sub1 .inner .owl-carousel .owl-nav {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -80px;
+      height: 90px; }
+      @media (max-width: 575px) {
+        .wrap section.sub1 .inner .owl-carousel .owl-nav {
+          margin-top: -45px;
+          opacity: 0.3;
+          filter: alpha(opacity=30); } }
+      .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev {
+        background: rgba(1, 1, 1, 0.2) url(../img/arrow_thin_l.png) no-repeat 40% 46%;
+        float: left;
+        width: 35px;
+        height: 90px;
+        border-radius: 0;
+        margin: 0; }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev {
+            background: rgba(1, 1, 1, 0.5) url(../img/arrow_thin_l.png) no-repeat 40% 46%; } }
+        .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-prev:hover {
+          opacity: 0.6;
+          filter: alpha(opacity=60); }
+      .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next {
+        background: rgba(1, 1, 1, 0.2) url(../img/arrow_thin_r.png) no-repeat 55% 46%;
+        float: right;
+        width: 35px;
+        height: 90px;
+        border-radius: 0;
+        margin: 0; }
+        @media (max-width: 767px) {
+          .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next {
+            background: rgba(1, 1, 1, 0.5) url(../img/arrow_thin_r.png) no-repeat 55% 46%; } }
+        .wrap section.sub1 .inner .owl-carousel .owl-nav .owl-next:hover {
+          opacity: 0.6;
+          filter: alpha(opacity=60); }
+      .wrap section.sub1 .inner .owl-carousel .owl-nav span {
+        display: none; }
+    .wrap section.sub1 .inner .owl-carousel .owl-dots {
       display: none; }
-  .wrap section.sub1 .inner .owl-carousel .owl-dots {
-    display: none; }
   .wrap section.sub2 .inner article.course_at {
     height: 430px;
     overflow-y: auto;
