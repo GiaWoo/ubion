@@ -240,10 +240,11 @@ body {
   .wrap header.fixed {
     background: none;
     border: none;
-    padding: 0; }
-    @media (max-width: 576px) {
-      .wrap header.fixed {
-        background: #fff; } }
+    padding: 0;
+    background: #111;
+    /* The Fallback */
+    background: rgba(17, 17, 17, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .wrap header.fixed .sm_logo {
       display: block; }
     @media (max-width: 992px) {
@@ -251,8 +252,7 @@ body {
         padding: 0;
         background: #111;
         /* The Fallback */
-        background: rgba(17, 17, 17, 0.8);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
+        background: rgba(17, 17, 17, 0.7); } }
   .wrap header nav {
     width: 100%; }
     @media (max-width: 768px) {
@@ -293,6 +293,9 @@ body {
         .wrap header nav.navbar .navbar-collapse .navbar-nav li a.nav-link {
           padding-right: .2rem;
           padding-left: .1rem; }
+          @media (max-width: 768px) {
+            .wrap header nav.navbar .navbar-collapse .navbar-nav li a.nav-link {
+              padding: 2% 0; } }
         .wrap header nav.navbar .navbar-collapse .navbar-nav li a:hover i {
           display: -moz-inline-stack;
           display: inline-block;
@@ -427,9 +430,9 @@ body {
           background-repeat: repeat;
           background-size: cover; }
           .wrap section.home .carousel .carousel-inner div.bg1 {
-            background-image: url(../img/bg3.jpg); }
-          .wrap section.home .carousel .carousel-inner div.bg2 {
             background-image: url(../img/bg2.jpg); }
+          .wrap section.home .carousel .carousel-inner div.bg2 {
+            background-image: url(../img/bg3.jpg); }
           .wrap section.home .carousel .carousel-inner div.bg3 {
             background-image: url(../img/bg1.jpg); }
         .wrap section.home .carousel .carousel-inner .carousel-caption {
@@ -455,21 +458,21 @@ body {
               word-break: keep-all; } }
           @media (max-width: 576px) {
             .wrap section.home .carousel .carousel-inner .carousel-caption {
-              padding: 0 14%; } }
+              padding: 0 5%; } }
           .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
             font-size: 58px;
             font-size: 3.77rem;
-            margin-top: 39%;
+            margin-top: 26%;
             font-family: 'nsB';
             letter-spacing: -0.5px; }
             @media (min-width: 993px) and (max-width: 1280px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
                 font-size: 50px;
                 font-size: 3.25rem;
-                margin-top: 16%; } }
+                margin-top: 23%; } }
             @media (max-width: 992px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption h3 {
-                margin-top: 26%;
+                margin-top: 30%;
                 font-size: 46px;
                 font-size: 2.99rem; } }
             @media (max-width: 768px) {
@@ -487,7 +490,7 @@ body {
             font-size: 1.3rem;
             line-height: 25px;
             line-height: 1.875rem;
-            margin-top: 4%;
+            margin-top: 1%;
             font-family: 'nsL'; }
             @media (max-width: 992px) {
               .wrap section.home .carousel .carousel-inner .carousel-caption p {
@@ -581,17 +584,19 @@ body {
               position: absolute;
               left: 0;
               top: 0;
+              width: 40px;
+              height: 40px;
               margin-left: 1%;
               margin-top: 40%; } }
           @media (max-width: 768px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
-              margin-top: 48%;
-              width: 40px;
-              height: 40px; } }
+              margin-top: 48%; } }
           @media (max-width: 576px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-prev {
+              display: none;
               margin-top: 54%; } }
         .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
+          left: 0;
           margin-left: 63px;
           margin-top: 65%;
           width: 60px;
@@ -602,6 +607,7 @@ body {
               position: absolute;
               top: 0;
               right: 0;
+              left: auto;
               margin-left: 0;
               margin-right: 1%;
               margin-top: 30%; } }
@@ -609,17 +615,19 @@ body {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
               position: absolute;
               top: 0;
+              left: auto;
               right: 0;
+              width: 40px;
+              height: 40px;
               margin-left: 0;
               margin-right: 1%;
               margin-top: 40%; } }
           @media (max-width: 768px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
-              margin-top: 48%;
-              width: 40px;
-              height: 40px; } }
+              margin-top: 48%; } }
           @media (max-width: 576px) {
             .wrap section.home .carousel .car_btn_wrap .carousel-control-next {
+              display: none;
               margin-top: 56%; } }
     .wrap section.home video {
       position: relative;
@@ -920,38 +928,44 @@ body {
       color: #111; }
       .wrap section.sub2 .inner article.course_at ul li {
         height: 270px;
-        padding-right: 0; }
+        padding-right: 0;
+        margin-top: 1%; }
         @media (max-width: 768px) {
           .wrap section.sub2 .inner article.course_at ul li {
             -webkit-box-flex: 1;
             -ms-flex: auto;
             flex: auto;
-            height: auto; } }
-        .wrap section.sub2 .inner article.course_at ul li:first-child {
-          margin-top: 0; }
-        .wrap section.sub2 .inner article.course_at ul li dl.conts {
-          width: 100%;
-          height: 100%;
-          padding: 50px 30px; }
-          .wrap section.sub2 .inner article.course_at ul li dl.conts dt.txt {
-            font-size: 20px;
-            font-size: 1.3rem;
-            font-family: 'nsB'; }
-          .wrap section.sub2 .inner article.course_at ul li dl.conts dd {
-            font-size: 14px;
-            font-size: 0.91rem;
-            font-family: 'nsL';
-            margin: 6px auto 0;
-            padding: 7px 2px;
-            width: 60px; }
-      .wrap section.sub2 .inner article.course_at ul.st1 li dl {
-        background: #fff url(../img/sec2_icon01.png) no-repeat 29% 60%; }
-      .wrap section.sub2 .inner article.course_at ul.st1 li:nth-child(2n) dl {
-        background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 82%; }
-      .wrap section.sub2 .inner article.course_at ul.st2 li dl {
-        background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
-      .wrap section.sub2 .inner article.course_at ul.st2 li:nth-child(2n) dl {
-        background: #fff url(../img/sec2_icon01.png) no-repeat 30% 60%; }
+            height: auto;
+            margin-top: 2%; } }
+        .wrap section.sub2 .inner article.course_at ul li dl {
+          background: #fff url(../img/sec2_icon01.png) no-repeat 29% 60%; }
+          .wrap section.sub2 .inner article.course_at ul li dl.conts {
+            width: 100%;
+            height: 100%;
+            padding: 50px 30px; }
+            .wrap section.sub2 .inner article.course_at ul li dl.conts dt.txt {
+              font-size: 20px;
+              font-size: 1.3rem;
+              font-family: 'nsB'; }
+            .wrap section.sub2 .inner article.course_at ul li dl.conts dd {
+              font-size: 14px;
+              font-size: 0.91rem;
+              font-family: 'nsL';
+              margin: 6px auto 0;
+              padding: 7px 2px;
+              width: 60px; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(2) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(4) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(5) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(7) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(10) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
+        .wrap section.sub2 .inner article.course_at ul li:nth-child(12) dl {
+          background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%; }
   .wrap section.sub3 {
     background: url(../img/sub3_bg.jpg) no-repeat top center;
     background-size: cover;
