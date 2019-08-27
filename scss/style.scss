@@ -107,8 +107,11 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			//@include opacity-bg(#111, 0.4);
+			@include opacity-bg(#fff, 0.1);
 			border-bottom: 1px solid rgba(255,255,255,0.1);
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
 			.sm_logo {
 				display: block;
 			}
@@ -118,7 +121,7 @@ body {
 			}
 			@include breakpoint(large) {
 				padding: 0;
-				@include opacity-bg(#111, 0.7);
+				@include opacity-bg(#fff, 0.1);
 			}
 		}
 		nav {
@@ -222,10 +225,11 @@ body {
 						margin: 2% 0;
 					}
 					a.down_btn {
-						@extend %font_color_co_gray;
+						//@extend %font_color_co_gray;
 						@include font-size(11);
 						@include border-radius(4px);
 						@include inline-block();
+						color: #888;
 						border: 1px solid #777;
 						padding: 9px 10px;
 						text-decoration: none;
@@ -433,16 +437,15 @@ body {
 					top: 77%;
 					left: 50%;
 					margin-left: -600px;
-					height: 100%;
 					z-index: 99;
 					@include breakpoint(laptop) {
-						width: 100%;
+						width: 98%;
 						left: 0;
 						margin-left: 2%;
 						top: 520px;
 					}
 					@include breakpoint(large) {
-						width: 100%;
+						width: 97%;
 						left: 0;
 						margin-left: 3%;
 						top: 620px;
@@ -536,14 +539,14 @@ body {
 				width: 120px;
 				z-index: 999;
 				@include opacity-bg(#aaa, 0.1);
-				@include font-size(13);
+				@include font-size(12);
 				text-align: center;
 				padding: 5px 10px 7px;
 				z-index: 99;
 				text-transform: uppercase;
 				@include border-radius(50px);
 				@include breakpoint(small) {
-					@include font-size(12);
+					@include font-size(11);
 					display: block;
 					font-family: 'nsB';
 				}
@@ -577,7 +580,7 @@ body {
 				.owl-carousel {
 					div {
 						height: 100%;
-						cursor: pointer;
+						cursor: grabbing;
 						&.item {
 							height: 500px;
 							width: 100%;
@@ -1141,9 +1144,16 @@ body {
 								float: right;
 								text-align: left;
 								padding: 45px 20px;
+								@include breakpoint(laptop) {
+									br {
+										display: none;
+										word-break: keep-all;
+									}
+								}
 								@include breakpoint(large) {
 									br {
 										display: none;
+										word-break: keep-all;
 									}
 									width: 70%;
 								}
