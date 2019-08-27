@@ -136,7 +136,7 @@ body, .wrap header nav.navbar .navbar-collapse .navbar-nav li a, .wrap section.h
 .wrap .footer section.info_wrap .inner a.top_btn {
   background-color: #303030; }
 
-.wrap header nav.navbar div.down_box a.down_btn, .wrap section .inner .tit_wrap .ex_txt, .wrap section.home .btn_box a {
+.wrap section .inner .tit_wrap .ex_txt, .wrap section.home .btn_box a {
   color: #666666; }
 
 .wrap section.sub2 .inner article.course_at::-webkit-scrollbar-thumb {
@@ -240,15 +240,21 @@ body {
     background: none;
     border: none;
     padding: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    background: #fff;
+    /* The Fallback */
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
     .wrap header.fixed .sm_logo {
       display: block; }
     @media (max-width: 991px) {
       .wrap header.fixed {
         padding: 0;
-        background: #111;
+        background: #fff;
         /* The Fallback */
-        background: rgba(17, 17, 17, 0.7); } }
+        background: rgba(255, 255, 255, 0.1); } }
   .wrap header nav {
     width: 100%; }
     @media (max-width: 767px) {
@@ -347,6 +353,7 @@ body {
         vertical-align: top;
         zoom: 1;
         *display: inline;
+        color: #888;
         border: 1px solid #777;
         padding: 9px 10px;
         text-decoration: none;
@@ -531,17 +538,16 @@ body {
         top: 77%;
         left: 50%;
         margin-left: -600px;
-        height: 100%;
         z-index: 99; }
         @media (min-width: 992px) and (max-width: 1280px) {
           .wrap section.home .carousel .car_btn_wrap {
-            width: 100%;
+            width: 98%;
             left: 0;
             margin-left: 2%;
             top: 520px; } }
         @media (max-width: 991px) {
           .wrap section.home .carousel .car_btn_wrap {
-            width: 100%;
+            width: 97%;
             left: 0;
             margin-left: 3%;
             top: 620px; } }
@@ -627,8 +633,8 @@ body {
       background: #aaa;
       /* The Fallback */
       background: rgba(170, 170, 170, 0.1);
-      font-size: 13px;
-      font-size: 0.845rem;
+      font-size: 12px;
+      font-size: 0.78rem;
       text-align: center;
       padding: 5px 10px 7px;
       z-index: 99;
@@ -639,8 +645,8 @@ body {
       /* stops bg color from leaking outside the border: */ }
       @media (max-width: 575px) {
         .wrap section.home .btn_box {
-          font-size: 12px;
-          font-size: 0.78rem;
+          font-size: 11px;
+          font-size: 0.715rem;
           display: block;
           font-family: 'nsB'; } }
       .wrap section.home .btn_box a {
@@ -658,7 +664,8 @@ body {
         min-height: auto; } }
     .wrap section.sub1 .inner .owl-carousel div {
       height: 100%;
-      cursor: pointer; }
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
       .wrap section.sub1 .inner .owl-carousel div.item {
         height: 500px;
         width: 100%;
@@ -1092,11 +1099,16 @@ body {
       float: right;
       text-align: left;
       padding: 45px 20px; }
+      @media (min-width: 992px) and (max-width: 1280px) {
+        .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt br {
+          display: none;
+          word-break: keep-all; } }
       @media (max-width: 991px) {
         .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt {
           width: 70%; }
           .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt br {
-            display: none; } }
+            display: none;
+            word-break: keep-all; } }
       @media (max-width: 575px) {
         .wrap section.sub4 .inner article.partner_at ul.review_wrap li .review_txt {
           padding: 35px 15px 15px; } }
