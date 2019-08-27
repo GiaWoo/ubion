@@ -236,7 +236,7 @@ body {
 						-webkit-transition: all 0.3s;
 						-o-transition: all 0.3s;
 						transition: all 0.3s;
-					&.bg1 {
+						&.bg1 {
 							width: 115px;
 							background: url(../img/hd_icon01.png) no-repeat 9px 45%;
 						}
@@ -338,32 +338,44 @@ body {
 				.carousel-inner {
 					height: 100%;
 					div {
-						height: 100%;
-						background-position: 50% 50%;
-						background-repeat: repeat;
-						background-size: cover;
-						&.bg1 {
-							background-image: url(../img/bg1.jpg);
-							@include breakpoint(small) {
+						.img {
+							width: 100%;
+							transform: scale(1.1);
+							transition: transform 2.5s ease-out;
+						}
+						@include breakpoint(large) {
+							img {
+								display: none;
+							}
+							height: 100%;
+							background-size: cover;
+							background-position: 50% 50%;
+							background-repeat: repeat;
+							&.bg1 {
+								background-image: url(../img/bg1.jpg);
+							}
+							&.bg2 {
+								background-image: url(../img/bg3.jpg);
+							}
+							&.bg3 {
+								background-image: url(../img/bg2.jpg);
+							}
+
+						}
+						@include breakpoint(small) {
+							&.bg1 {
 								background-position: 63% 20%;
 							}
-						}
-						&.bg2 {
-							background-image: url(../img/bg3.jpg);
-							@include breakpoint(small) {
+							&.bg2 {
 								background-position: 65% 20%;
 							}
-						}
-						&.bg3 {
-							background-image: url(../img/bg2.jpg);
-							@include breakpoint(small) {
+							&.bg3 {
 								background-position: 68% 20%;
 							}
 						}
 						&.active {
-							background {
-								transform: scale(1.1);
-								transition: transform 2.5s ease-out;
+							.img {
+								transform: scale(1.2);
 							}
 						}
 						.carousel-caption {
