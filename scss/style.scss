@@ -45,6 +45,19 @@
     }
 }
 
+@keyframes main_bg {
+    0% {
+		-ms-transform: scale(1.2, 1.2);
+		-webkit-transform: scale(1.2, 1.2);
+        transform: scale(1.2);
+    }
+    100% {
+		-ms-transform: scale(1, 1);
+		-webkit-transform: scale(1, 1);
+        transform: scale(1);
+    }
+}
+
 //크롬과 파이어폭스 브라우저에서 글자에 안티앨리어싱이 적용
 html {
 	-webkit-text-size-adjust: antialiased;
@@ -338,65 +351,73 @@ body {
 				.carousel-inner {
 					height: 100%;
 					div {
-						.img {
+						height: 100%;
+						div.bg_area {
 							width: 100%;
-							transform: scale(1.1);
 							transition: transform 2.5s ease-out;
-						}
-						@include breakpoint(large) {
-							img {
-								display: none;
-							}
-							height: 100%;
 							background-size: cover;
 							background-position: 50% 50%;
 							background-repeat: repeat;
+							-ms-transform: scale(1.2, 1.2);
+							-webkit-transform: scale(1.2, 1.2);
+							transform: scale(1.2);
 							&.bg1 {
 								background-image: url(../img/bg1.jpg);
 							}
 							&.bg2 {
-								background-image: url(../img/bg3.jpg);
-							}
-							&.bg3 {
 								background-image: url(../img/bg2.jpg);
 							}
-
-						}
-						@include breakpoint(small) {
-							&.bg1 {
-								background-position: 63% 20%;
-							}
-							&.bg2 {
-								background-position: 65% 20%;
-							}
 							&.bg3 {
-								background-position: 68% 20%;
+								background-image: url(../img/bg3.jpg);
+							}
+							@include breakpoint(medium) {
+								&.bg1 {
+									background-position: 63% 20%;
+								}
+								&.bg2 {
+									background-position: 65% 20%;
+								}
+								&.bg3 {
+									background-position: 68% 20%;
+								}
 							}
 						}
 						&.active {
-							.img {
-								transform: scale(1.2);
+							div.bg_area {
+								//-ms-transform: scale(1, 1) rotate(.001deg);
+								//-webkit-transform: scale(1, 1) rotate(.001deg);
+								//transform: scale(1) rotate(.001deg);
+								//-webkit-transition: transform 5s ease-out;
+								//transition: transform 5s ease-out;
+								//-webkit-transition-delay: 0s;
+								//transition-delay: 0s;
+								-ms-animation: main_bg 7s ease-out;
+								-webkit-animation: main_bg 7s ease-out;
+								animation: main_bg 7s ease-out;
+								animation-fill-mode: forwards;
 							}
 						}
 						.carousel-caption {
-							width: 100%;
-							top: 0;
-							left: 50%;
-							margin-left: -600px;
+							position: absolute;
 							text-align: left;
+							top: 45%;
+							word-break: keep-all;
+							-webkit-transform: translateY(-45%);
+							-ms-transform: translateY(-45%);
+							transform: translateY(-45%);
 							@include breakpoint(laptop) {
-								left: 0;
-								margin-left: 0;
-								padding: 0 2%;
+								left: 10%;
+								top: 38%;
 							}
 							@include breakpoint(large) {
-								width: 100%;
-								left: 0;
-								margin-left: 0;
-								padding: 0 3%;
+								left: 5%;
+								top: 43%;
 							}
-							@include breakpoint(medium) {
-								word-break: keep-all;
+							@include breakpoint(small) {
+								top: 24%;
+							}
+							@include breakpoint(tiny) {
+								top: 18%;
 							}
 							h3 {
 								@include font-size(58);
@@ -406,23 +427,19 @@ body {
 								letter-spacing: -1px;
 								@include breakpoint(laptop) {
 									@include font-size(50);
-									margin-top: 300px;
 								}
 								@include breakpoint(large) {
 									@include font-size(46);
-									margin-top: 400px;
 								}
 								@include breakpoint(medium) {
 									@include font-size(42);
-									margin-top: 360px;
+									word-break: keep-all;
 								}
 								@include breakpoint(small) {
 									@include font-size(36);
-									margin-top: 320px;
 								}
 								@include breakpoint(tiny) {
 									@include font-size(32);
-									margin-top: 260px;
 								}
 								span {
 									@extend %font_color_co_beige;
@@ -442,15 +459,15 @@ body {
 								@include breakpoint(medium) {
 									@include font-size(15);
 									@include line-height(10);
-									color: #ddd;
+									font-family: 'nsR';
 									margin-top:5%;
-									width: 80%;
+									width: 86%;
 									br {
 										display: none;
 									}
 								}
 								@include breakpoint(small) {
-									width: 90%;
+									width: 94%;
 									@include font-size(14);
 									@include line-height(10);
 								}
@@ -460,56 +477,28 @@ body {
 				}
 				.car_btn_wrap {
 					position: absolute;
-					width: 1200px;
-					top: 77%;
-					left: 50%;
-					margin-left: -600px;
+					top: 74%;
+					left: 15%;
+					width: 85%;
 					z-index: 99;
 					@include breakpoint(laptop) {
-						width: 98%;
-						left: 0;
-						margin-left: 2%;
-						top: 520px;
+						left: 10%;
+						top: 70%;
+						width: 90%;
 					}
 					@include breakpoint(large) {
-						width: 97%;
-						left: 0;
-						margin-left: 3%;
-						top: 620px;
+						left: 5%;
+						top: 72%;
+						width: 95%;
+					}
+					@include breakpoint(medium) {
+						top: 67%;
 					}
 					@include breakpoint(small) {
-						top: 580px;
+						top: 82%;
 					}
 					@include breakpoint(tiny) {
-						top: 500px;
-					}
-					.carousel-indicators {
-						position: relative;
-						right: 0;
-						margin-left: 85%;
-						margin-right: 0;
-						margin-top: 40px;
-						@include breakpoint(medium) {
-							margin-left: 0;
-							float: left;
-							margin-top: 0;
-						}
-						li {
-							width: 5px;
-							height: 5px;
-							border-radius: 100px;
-							background: #aaaaaa;
-							border:2px solid #aaaaaa;
-							margin: 0 5px;
-							&.active {
-								margin-top:-1px;
-								background: transparent;
-								border:3px solid #fff;
-							}
-							&:hover {
-								@include opacity(0.7);
-							}
-						}
+						top: 88%;
 					}
 					.carousel-control-prev {
 						width: 50px;
@@ -527,6 +516,35 @@ body {
 						border: 1px solid #fff;
 						@include breakpoint(medium) {
 							display: none;
+						}
+					}
+					.carousel-indicators {
+						top: 40px;
+						right: 0;
+						left: unset;
+						justify-content: unset;
+						@include breakpoint(medium) {
+							left: 0;
+							right: unset;
+							margin-top: 0;
+							margin-left: 0;
+							padding-left: 0;
+						}
+						li {
+							width: 5px;
+							height: 5px;
+							border-radius: 100px;
+							background: #aaaaaa;
+							border:2px solid #aaaaaa;
+							margin: 0 5px;
+							&.active {
+								margin-top:-1px;
+								background: transparent;
+								border:3px solid #fff;
+							}
+							&:hover {
+								@include opacity(0.7);
+							}
 						}
 					}
 				}
@@ -557,7 +575,7 @@ body {
 				margin-left: -63px;
 				width: 126px;
 				z-index: 999;
-				@include opacity-bg(#aaa, 0.1);
+				@include opacity-bg(#fff, 0.1);
 				@include font-size(12);
 				text-align: center;
 				padding: 5px 10px 7px;
