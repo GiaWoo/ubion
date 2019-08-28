@@ -476,7 +476,7 @@ body {
 					z-index: 99;
 					@include breakpoint(laptop) {
 						left: 10%;
-						top: 70%;
+						top: 73%;
 						width: 90%;
 					}
 					@include breakpoint(large) {
@@ -989,6 +989,7 @@ body {
 					}
 					ul {
 						padding: 0 10px;
+						margin: 0;
 						li {
 							padding: 80px 40px;
 							word-break: keep-all;
