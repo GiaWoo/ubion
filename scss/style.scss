@@ -398,31 +398,24 @@ body {
 							}
 						}
 						.carousel-caption {
-							position: absolute;
+							position: relative;
 							text-align: left;
-							top: 45%;
 							word-break: keep-all;
+							bottom: 10%;
 							-webkit-transform: translateY(-45%);
 							-ms-transform: translateY(-45%);
 							transform: translateY(-45%);
 							@include breakpoint(laptop) {
 								left: 10%;
-								top: 38%;
+								width: 90%;
 							}
 							@include breakpoint(large) {
 								left: 5%;
-								top: 43%;
-							}
-							@include breakpoint(small) {
-								top: 24%;
-							}
-							@include breakpoint(tiny) {
-								top: 18%;
+								width: 95%;
 							}
 							h3 {
 								@include font-size(58);
 								@extend %font_color_co_white;
-								margin-top: 460px;
 								font-family: 'nsB';
 								letter-spacing: -1px;
 								@include breakpoint(laptop) {
@@ -467,7 +460,7 @@ body {
 									}
 								}
 								@include breakpoint(small) {
-									width: 94%;
+									width: 90%;
 									@include font-size(14);
 									@include line-height(10);
 								}
@@ -521,11 +514,12 @@ body {
 					.carousel-indicators {
 						top: 40px;
 						right: 0;
-						left: unset;
-						justify-content: unset;
+						left: none;
+						justify-content: flex-end;
 						@include breakpoint(medium) {
+							justify-content: flex-start;
 							left: 0;
-							right: unset;
+							right: none;
 							margin-top: 0;
 							margin-left: 0;
 							padding-left: 0;
