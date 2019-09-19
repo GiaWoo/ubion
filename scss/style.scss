@@ -47,13 +47,13 @@
 
 @keyframes main_bg {
     0% {
-		-ms-transform: scale(1.2, 1.2);
-		-webkit-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-webkit-transform: scale(1.2, 1.2);
         transform: scale(1.2);
     }
     100% {
-		-ms-transform: scale(1, 1);
-		-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
         transform: scale(1);
     }
 }
@@ -595,7 +595,6 @@ body {
 		//sub1
 		&.sub1{
 			@extend %bg_color_co_white;
-			@include clearfix;
 			min-height: 900px;
 			@include breakpoint(medium) {
 				min-height: auto;
