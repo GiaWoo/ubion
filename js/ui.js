@@ -53,6 +53,10 @@ $(function() {
         header.addClass('fixed');
       }
     });
+    $(".navbar-toggler").on("click", function() {
+        // "navbar-toggler"에 "toggler_active"라는 클래스를 추가하고, 다시 한 번 클릭하면 제거함.
+        $(this).toggleClass("toggler_active");
+    });
     $('.sub1 .owl-carousel').owlCarousel({
         stagePadding: 0,
         loop:true,
@@ -65,7 +69,7 @@ $(function() {
         responsive : {
             0 : {
                 items:1,
-                stagePadding:40,
+                stagePadding:30,
                 margin:42,
             },
             768 : {
