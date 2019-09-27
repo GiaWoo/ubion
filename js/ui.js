@@ -58,12 +58,12 @@ $(function() {
         $(this).toggleClass("toggler_active");
     });
     $('.sub1 .owl-carousel').owlCarousel({
-        stagePadding: 0,
+        stagePadding: 50,
         loop:true,
         autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
-        margin:1,
+        margin:60,
         nav:true,
         responsiveClass:true,
         responsive : {
