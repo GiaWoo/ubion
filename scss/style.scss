@@ -1,62 +1,13 @@
 @charset 'utf-8';
 
-/*NanumSquare.scss*/
+//NanumSquare
 @import 'NanumSquare';
 @import 'reset';
+
+//bootstrap Custom variables
+@import 'custom';
+@import "../bootstrap/scss/bootstrap";
 @import 'mixins';
-
-//컬러 플레이스홀더
-@include color-list (
-	co_white #ffffff,
-	co_black #111111,
-		co_light_black #303030,
-	co_gray #666666,
-		co_light_gray #eeeeee,
-		co_light_gray_beige #eceae7,
-	co_blue #0c4da2,
-	co_sky #6cc2f3,
-	co_beige #d2a16d,
-	co_red #ff6871,
-	co_yellow #ffd74a,
-);
-//컬러 플레이스 홀더 내용
-//└위 color-list 믹스인에 네임과 컬러값을 추가하여 변수로 활용
-//   1-1. %event_wrap_light_변수 - 밝은색 바탕 컬러 세트(밝은 배경/진한 글씨/진한 라인)
-//   1-2. %event_wrap_dark_변수 - 어두운색 바탕 컬러 세트(어두운 배경/밝은 글씨/밝은 라인)
-//   2-1. %font_color_변수 - 폰트 컬러 속성
-//   2-2. %bg_color_변수 - 배경색 컬러 속성
-//   2-3. %border_color_변수 - 라인 컬러 속성
- 
-@keyframes balloon {
-    0% {
-        margin-bottom: 50px; 
-    }
-    100% {
-        margin-bottom: 55px;
-    }
-}
-
-@keyframes balloon2 {
-    0% {
-        margin-top: 10px; 
-    }
-    100% {
-        margin-top: 15px;
-    }
-}
-
-@keyframes main_bg {
-    0% {
-		-ms-transform: scale(1.2, 1.2);
-		-webkit-transform: scale(1.2, 1.2);
-		transform: scale(1.2);
-    }
-    100% {
-		-ms-transform: scale(1, 1);
-		-webkit-transform: scale(1, 1);
-		transform: scale(1);
-    }
-}
 
 //크롬과 파이어폭스 브라우저에서 글자에 안티앨리어싱이 적용
 html {
@@ -67,7 +18,7 @@ html {
 body {
 	font-family: 'nsR', sans-serif, -apple-system;
 	font-size: 18px;
-	@extend %font_color_co_white;
+	color: $white;
 }
 
 .wrap {
@@ -77,38 +28,174 @@ body {
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
-	@extend %bg_color_co_white;
+	background: $white;
 	
 	header {
 		&.header {
 			position: fixed;
 			width: 100%;
 			z-index: 999;
-			@extend %bg_color_co_black;
+			background: $white;
+			//@include opacity-bg(#fff, 0.9);
 			padding: 0;
-			border-bottom: 1px solid rgba(255,255,255,0.1);
+			box-shadow: 1px 1px 20px rgba(1,1,1,0.1);
+			//border-bottom: 1px solid #fff;
 			-webkit-transition: all 0.5s;
 			-o-transition: all 0.5s;
 			transition: all 0.5s;
-			.sm_logo {
+			.logo {
 				display: block;
 			}
-			nav.navbar {
-				.navbar-collapse {
-					float: right;
-					@media (min-width:768px) {
-						 display: block!important;
-					}
-					.navbar-nav {
-						float:right;
-						li {
-							margin: 0 20px 0 0;
+			.logo_s {
+				display: none;
+			}
+			nav {
+				width: 100%;
+				&.navbar {
+					.navbar-brand {
+						img{ 
+							@include breakpoint(medium) {
+								width: 74px;
+							}
 						}
 					}
+					.navbar-collapse {
+						float: right;
+						@include breakpoint(large) {
+							width:100%;
+						}
+						@media (min-width:768px) {
+							display: block!important;
+					   }
+						.navbar-nav {
+							float:right;
+							@include breakpoint(medium) {
+								width:100%;
+								padding-left:0;
+							}
+							li {
+								position: relative;
+								margin: 0 20px 0 0;
+								@include breakpoint(medium) {
+									border-bottom: 1px solid rgba(255,255,255,0.1);
+								}
+								a {
+									color: $black;
+									@include font-size(16);
+									font-family: 'nsB';
+									@media (min-width:768px) and (max-width:1060px) {
+										@include font-size(14);
+									}
+									@include breakpoint(large) {
+										@include font-size(14);
+									}
+									@include breakpoint(medium) {
+										padding: 2% 0;
+									}
+									@include breakpoint(small) {
+										padding: 4% 0;
+									}
+									i {
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										width: 0%;
+										-webkit-transition: all 0.5s;
+										-o-transition: all 0.5s;
+										transition: all 0.5s;
+									}
+									&.nav-link {
+										padding-right: .2rem;
+										padding-left: .1rem;
+									}
+									&:hover {
+										i {
+											@include inline-block();
+											background: $black;
+											width: 100%;
+											height: 2px;
+											-webkit-transition: all 0.5s;
+											-o-transition: all 0.5s;
+											transition: all 0.5s;
+										}
+									}
+									span {
+										color: $gray-600;
+										@include font-size(12);
+										font-family: 'nsR';
+										margin-left: 10px;
+										@media (min-width:768px) and (max-width:1010px) {
+											display: none;
+										}
+									}
+								}
+								&.active {
+									a {
+										i {
+											@include inline-block();
+											background: $black;
+											width: 100%;
+											height: 2px;
+											-webkit-transition: all 0.5s;
+											-o-transition: all 0.5s;
+											transition: all 0.5s;
+										}
+									}
+								}
+							}
+						}
+					}
+					div.down_box {
+						text-align: right;
+						float:right;
+						@include breakpoint(medium) {
+							margin: 1% 0 0;
+							width:100%;
+						}
+						@include breakpoint(small) {
+							margin: 2% 0;
+						}
+						a.down_btn {
+							//color: $gray-600;
+							@include font-size(11);
+							@include border-radius(4px);
+							@include inline-block();
+							color: rgba(255,255,255,0.5);
+							border: 1px solid rgba(255,255,255,0.3);
+							padding: 9px 10px;
+							text-decoration: none;
+							-webkit-transition: all 0.3s;
+							-o-transition: all 0.3s;
+							transition: all 0.3s;
+							&.bg1 {
+								width: 115px;
+								background: url(../img/hd_icon01.png) no-repeat 9px 45%;
+							}
+							&.bg2 {
+								width: 125px;
+								background: url(../img/hd_icon02.png) no-repeat 10px 45%;
+							}
+							&:hover {
+								color: rgba(255,255,255,0.7);
+								border: 1px solid rgba(255,255,255,0.5);
+								-webkit-transition: all 0.3s;
+								-o-transition: all 0.3s;
+								transition: all 0.3s;
+							}
+							@include breakpoint(medium) {
+								color: rgba(255,255,255,0.6);
+								border: 1px solid rgba(255,255,255,0.5);
+							}
+							span {
+								//padding-left: 25px;
+							}
+						}
+					}
+	
 				}
 			}
 
-			$color: #f7f3e8;
+			//$color: #f7f3e8;
 			$size: 25px;
 			$weight: 2px;
 			$speed: 0.33s;
@@ -131,7 +218,7 @@ body {
 						display: block;
 						width: 100%;
 						height: $weight;
-						background: $color;
+						background: $gray-100;
 						position: absolute;
 						transition: $speed $easing;
 					}
@@ -174,160 +261,49 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			@include opacity-bg(#fff, 0.1);
+			background: $indigo;
+			//@include opacity-bg(#fff, 0.1);
 			border-bottom: 1px solid rgba(255,255,255,0.1);
 			-webkit-transition: all 0.5s;
 			-o-transition: all 0.5s;
 			transition: all 0.5s;
-			.sm_logo {
+			.logo {
+				display: none;
+			}
+			.logo_s {
 				display: block;
 			}
 			nav.navbar {
 				.navbar-collapse {
+					.navbar-nav {
+						li {
+							&.nav-item  {
+								.nav-link {
+									color: $white;
+									span {
+										color: $gray-200;
+									}
+									&:hover {
+										i {
+											background: $white;
+										}
+									}
+								}
+							}
+							&.active {
+								.nav-link {
+									i {
+										background: $white;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 			@include breakpoint(large) {
 				padding: 0;
 				@include opacity-bg(#fff, 0.2);
-			}
-		}
-		nav {
-			width: 100%;
-			&.navbar {
-				.navbar-brand {
-					img{ 
-						@include breakpoint(medium) {
-							width: 74px;
-						}
-					}
-				}
-				.navbar-collapse {
-					@include breakpoint(large) {
-						width:100%;
-					}
-					.navbar-nav {
-						@include breakpoint(medium) {
-							width:100%;
-							padding-left:0;
-						}
-						li {
-							position: relative;
-							@include breakpoint(medium) {
-								border-bottom: 1px solid rgba(255,255,255,0.1);
-							}
-							a {
-								@extend %font_color_co_white;
-								@include font-size(16);
-								font-family: 'nsB';
-								@media (min-width:768px) and (max-width:1060px) {
-									@include font-size(14);
-								}
-								@include breakpoint(large) {
-									@include font-size(14);
-								}
-								@include breakpoint(medium) {
-									padding: 2% 0;
-								}
-								@include breakpoint(small) {
-									padding: 4% 0;
-								}
-								i {
-									position: absolute;
-									bottom: 0;
-									left: 0;
-									width: 0%;
-									-webkit-transition: all 0.5s;
-									-o-transition: all 0.5s;
-									transition: all 0.5s;
-								}
-								&.nav-link {
-									padding-right: .2rem;
-									padding-left: .1rem;
-								}
-								&:hover {
-									i {
-										@include inline-block();
-										@extend %bg_color_co_white;
-										width: 100%;
-										height: 2px;
-										-webkit-transition: all 0.5s;
-										-o-transition: all 0.5s;
-										transition: all 0.5s;
-									}
-								}
-								span {
-									@extend %font_color_co_light_gray;
-									@include font-size(12);
-									font-family: 'nsR';
-									margin-left: 10px;
-									@media (min-width:768px) and (max-width:1010px) {
-										display: none;
-									}
-								}
-							}
-							&.active {
-								a {
-									i {
-										@include inline-block();
-										@extend %bg_color_co_white;
-										width: 100%;
-										height: 2px;
-										-webkit-transition: all 0.5s;
-										-o-transition: all 0.5s;
-										transition: all 0.5s;
-									}
-								}
-							}
-						}
-					}
-				}
-				div.down_box {
-					text-align: right;
-					float:right;
-					@include breakpoint(medium) {
-						margin: 1% 0 0;
-						width:100%;
-					}
-					@include breakpoint(small) {
-						margin: 2% 0;
-					}
-					a.down_btn {
-						//@extend %font_color_co_gray;
-						@include font-size(11);
-						@include border-radius(4px);
-						@include inline-block();
-						color: rgba(255,255,255,0.5);
-						border: 1px solid rgba(255,255,255,0.3);
-						padding: 9px 10px;
-						text-decoration: none;
-						-webkit-transition: all 0.3s;
-						-o-transition: all 0.3s;
-						transition: all 0.3s;
-						&.bg1 {
-							width: 115px;
-							background: url(../img/hd_icon01.png) no-repeat 9px 45%;
-						}
-						&.bg2 {
-							width: 125px;
-							background: url(../img/hd_icon02.png) no-repeat 10px 45%;
-						}
-						&:hover {
-							color: rgba(255,255,255,0.7);
-							border: 1px solid rgba(255,255,255,0.5);
-							-webkit-transition: all 0.3s;
-							-o-transition: all 0.3s;
-							transition: all 0.3s;
-						}
-						@include breakpoint(medium) {
-							color: rgba(255,255,255,0.6);
-							border: 1px solid rgba(255,255,255,0.5);
-						}
-						span {
-							//padding-left: 25px;
-						}
-					}
-				}
-
 			}
 		}
 	}//header
@@ -376,7 +352,7 @@ body {
 					}
 				}
 				.ex_txt {
-					@extend %font_color_co_gray;
+					color: $gray-600;
 					@include font-size(34);
 					margin-top:40px;
 					font-family: 'nsL';
@@ -401,7 +377,7 @@ body {
 
 		//home
 		&.home {
-			background: #000;
+			background: $black;
 			.carousel {
 				height: 100%;
 				.carousel-inner {
@@ -453,6 +429,18 @@ body {
 								animation-fill-mode: forwards;
 							}
 						}
+						@keyframes main_bg {
+							0% {
+								-ms-transform: scale(1.2, 1.2);
+								-webkit-transform: scale(1.2, 1.2);
+								transform: scale(1.2);
+							}
+							100% {
+								-ms-transform: scale(1, 1);
+								-webkit-transform: scale(1, 1);
+								transform: scale(1);
+							}
+						}
 						.carousel-caption {
 							position: relative;
 							text-align: left;
@@ -471,7 +459,7 @@ body {
 							}
 							h3 {
 								@include font-size(58);
-								@extend %font_color_co_white;
+								color: $white;
 								font-family: 'nsB';
 								letter-spacing: -1px;
 								@include breakpoint(laptop) {
@@ -491,13 +479,13 @@ body {
 									@include font-size(32);
 								}
 								span {
-									@extend %font_color_co_beige;
+									color: $beige;
 								}
 							}
 							p {
 								@include font-size(20);
 								@include line-height(15);
-								@extend %font_color_co_white;
+								color: $white;
 								margin-top: 1%;
 								font-family: 'nsL';
 								@include breakpoint(large) {
@@ -537,7 +525,7 @@ body {
 					}
 					@include breakpoint(large) {
 						left: 5%;
-						top: 78%;
+						top: 82%;
 						width: 95%;
 					}
 					@include breakpoint(medium) {
@@ -584,8 +572,8 @@ body {
 							width: 5px;
 							height: 5px;
 							border-radius: 100px;
-							background: #aaaaaa;
-							border:2px solid #aaaaaa;
+							background: $gray-500;
+							border:2px solid $gray-500;
 							margin: 0 5px;
 							&.active {
 								margin-top:-1px;
@@ -599,7 +587,7 @@ body {
 					}
 				}
 			}
-			video {
+			/*video {
 				position: relative;
 				width:100%;
 				height:100%;
@@ -615,7 +603,7 @@ body {
 					height: 100%;
 					@include opacity-bg(#111, 0.4);
 				}
-			}
+			}*/
 			.btn_box{
 				display:inline-block;
 				position:absolute;
@@ -637,8 +625,16 @@ body {
 					display: block;
 					font-family: 'nsB';
 				}
+				@keyframes balloon {
+					0% {
+						margin-bottom: 50px; 
+					}
+					100% {
+						margin-bottom: 55px;
+					}
+				}
 				a {
-					@extend %font_color_co_gray;
+					color: $gray-600;
 					text-decoration: none;
 				}
 				.scroll_icon{
@@ -646,11 +642,10 @@ body {
 				}
 			}
 		}
-		
 
 		//sub1
 		&.sub1{
-			@extend %bg_color_co_white;
+			background: $gray-900;
 			@include clearfix;
 			min-height: 900px;
 			@include breakpoint(medium) {
@@ -659,178 +654,130 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						@extend %bg_color_co_blue;
+						background: $pink;
 					}
 					.en_tt {
-						@extend %font_color_co_blue;
+						color: $pink;
 					}
 				}
 				.owl-carousel {
 					div {
 						height: 100%;
-						cursor: grabbing;
+						position: relative;
+						cursor: pointer;
 						&.item {
-							height: 500px;
 							width: 100%;
-							padding: 220px 30px 40px;
+							&:hover {
+								.face1{
+									background: $pink;
+									transform: translateY(0);
+									.content{
+										@include opacity(1);
+									}
+								}
+								.face2{
+									transform: translateY(0);
+								}
+							}
 							@include breakpoint(medium) {
 								height: auto;
-								min-height: 340px;
-								padding: 10% 5%;
 							}
 						}
-						&.bg1 {
-							background: #fff url(../img/sec1_icon01.png) no-repeat 52% 10%;
-							&:hover {
-								background: #0c4da2 url(../img/sec1_icon01_hover.png) no-repeat 52% 10%;
-								h3 {
-									@extend %font_color_co_white;
-								}
-								p {
-									@extend %font_color_co_white;
-								}
+						.face {
+							height: 200px;
+							transition: 0.5s;
+							padding: 25px;
+							text-align: center;
+							&.face1{
+								position: relative;
+								background: $gray-900;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								z-index: 1;
+								transform: translateY(100px);
 								@include breakpoint(medium) {
-									background: #0c4da2;
+									background: $pink;
+									transform: translateY(0);
+								}
+								.content{
+									@include opacity(0.2);
+									transition: 0.5s;
+									@include breakpoint(medium) {
+										@include opacity(1);
+									}
+									img{
+										@include inline-block();
+										max-width: 100px;
+									}
+									h3 {
+										color: $white;
+										@include font-size(26);
+										font-family: 'nsB';
+										letter-spacing: -1px;
+										margin-top: 12px;
+										span {
+											@include font-size(12);
+										}
+										@include breakpoint(medium) {
+											@include font-size(20);
+											word-break: keep-all;
+										}
+									}
 								}
 							}
-							@include breakpoint(medium) {
-								background: #fff url(../img/lean_bg.png) repeat top left;
-								border-radius: 10px;
-								border: 1px solid #f1f1f1;
-							}
-						}
-						&.bg2 {
-							background: #fff url(../img/sec1_icon02.png) no-repeat 52% 10%;
-							&:hover {
-								background: #0c4da2 url(../img/sec1_icon02_hover.png) no-repeat 52% 10%;
-								h3 {
-									@extend %font_color_co_white;
-								}
-								p {
-									@extend %font_color_co_white;
-								}
+							&.face2{
+								position: relative;
+								background: #fff;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								padding: 20px;
+								box-sizing: border-box;
+								box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+								transform: translateY(-100px);
 								@include breakpoint(medium) {
-									background: #0c4da2;
+									transform: translateY(0);
 								}
-							}
-							@include breakpoint(medium) {
-								background: #fff url(../img/lean_bg.png) repeat top left;
-								border-radius: 10px;
-								border: 1px solid #f1f1f1;
-							}
-						}
-						&.bg3 {
-							background: #fff url(../img/sec1_icon03.png) no-repeat center 10%;
-							&:hover {
-								background: #0c4da2 url(../img/sec1_icon03_hover.png) no-repeat center 10%;
-								h3 {
-									@extend %font_color_co_white;
+								.content {
+									p {
+										margin-top:10px;
+										text-align: left;
+										color: $gray-800;
+										@include font-size(14);
+										@include line-height(13);
+										letter-spacing: -0.5px;
+										@include breakpoint(medium) {
+											@include font-size(14);
+											word-break: keep-all;
+											text-align: left;
+											br {
+												display: none;
+											}
+										}
+										@include breakpoint(small) {
+											@include line-height(11);
+										}
+										mark {
+											color: $gray-800;
+											background: linear-gradient(rgba(255,255,255,0) 50%, rgba(255,0,87,0.1) 50%);
+											font-family: 'nsB';
+										}
+										em {
+											@include font-size(12);
+											@include line-height(8);
+											margin-top:5px;
+											display: block;
+											color: $gray-500;
+										}
+										a {
+											@include font-size(14);
+											color: $pink;
+											font-family: 'nsR';
+										}
+									}
+			
 								}
-								p {
-									@extend %font_color_co_white;
-								}
-								@include breakpoint(medium) {
-									background: #0c4da2;
-								}
-							}
-							@include breakpoint(medium) {
-								background: #fff url(../img/lean_bg.png) repeat top left;
-								border-radius: 10px;
-								border: 1px solid #f1f1f1;
-							}
-						}
-						&.bg4 {
-							background: #fff url(../img/sec1_icon04.png) no-repeat center 10%;
-							&:hover {
-								background: #0c4da2 url(../img/sec1_icon04_hover.png) no-repeat center 10%;
-								h3 {
-									@extend %font_color_co_white;
-								}
-								p {
-									@extend %font_color_co_white;
-								}
-								@include breakpoint(medium) {
-									background: #0c4da2;
-								}
-							}
-							@include breakpoint(medium) {
-								background: #fff url(../img/lean_bg.png) repeat top left;
-								border-radius: 10px;
-								border: 1px solid #f1f1f1;
-							}
-						}
-						&.bg5 {
-							background: #fff url(../img/sec1_icon05.png) no-repeat center 10%;
-							&:hover {
-								background: #0c4da2 url(../img/sec1_icon05_hover.png) no-repeat center 10%;
-								h3 {
-									@extend %font_color_co_white;
-								}
-								p {
-									@extend %font_color_co_white;
-								}
-								@include breakpoint(medium) {
-									background: #0c4da2;
-								}
-							}
-							@include breakpoint(medium) {
-								background: #fff url(../img/lean_bg.png) repeat top left;
-								border-radius: 10px;
-								border: 1px solid #f1f1f1;
-							}
-						}
-						i {
-							@include inline-block();
-							background: #ccc;
-							height: 1px;
-							width: 60px;
-							@include breakpoint(medium) {
-								display: none;
-							}
-						}
-						h3 {
-							@extend %font_color_co_light_black;
-							@include font-size(30);
-							margin-top: 10px;
-							span {
-								@include font-size(12);
-							}
-							@include breakpoint(medium) {
-								@include font-size(20);
-								font-family: 'nsB';
-								word-break: keep-all;
-							}
-						}
-						p {
-							margin-top:30px;
-							@extend %font_color_co_light_black;
-							@include font-size(16);
-							@include line-height(13);
-							letter-spacing: -0.5px;
-							@include breakpoint(medium) {
-								@include font-size(14);
-								word-break: keep-all;
-								text-align: left;
-								br {
-									display: none;
-								}
-							}
-							mark {
-								@extend %font_color_co_sky;
-								background: none;
-								font-family: 'nsB';
-							}
-							em {
-								@include font-size(12);
-								@include line-height(8);
-								margin-top:5px;
-								display: block;
-								color: #aaa;
-							}
-							a {
-								@include font-size(14);
-								@extend %font_color_co_sky;
-								font-family: 'nsR';
 							}
 						}
 					}
@@ -839,7 +786,7 @@ body {
 						width: 100%;
 						top: 50%;
 						left: 0;
-						margin-top: -80px;
+						margin-top: -50px;
 						height: 90px;
 						@include breakpoint(small) {
 							margin-top: -45px;
@@ -898,14 +845,14 @@ body {
 		
 		//sub2
 		&.sub2{
-			@extend %bg_color_co_black;
+			background: $white;
 			.inner {
 				.tit_wrap {
 					i {
-						@extend %bg_color_co_beige;
+						background: $beige;
 					}
 					.en_tt {
-						@extend %font_color_co_beige;
+						color: $beige;
 					}
 				}
 				article.course_at {
@@ -927,7 +874,7 @@ body {
 						width: 10px; 
 					}
 					&::-webkit-scrollbar-thumb { 
-						@extend %bg_color_co_gray;
+						background: $gray-600;
 					}
 					&::-webkit-scrollbar-button { 
 						display: none;
@@ -935,6 +882,7 @@ body {
 					ul {
 						margin-left: 0;
 						margin-right: 0;
+						padding: 0;
 						color: #111;
 						li {
 							height: 270px;
@@ -955,13 +903,13 @@ body {
 									height: 100%;
 									padding: 50px 30px;
 									dt.txt {
-										@extend %font_color_co_light_black;
+										color: $gray-800;
 										@include font-size(20);
 										font-family: 'nsB';
 									}
 									dd {
-										@extend %bg_color_co_beige;
-										@extend %font_color_co_white;
+										background: $beige;
+										color: $white;
 										@include font-size(14);
 										font-family: 'nsL';
 										margin: 6px auto 0;
@@ -1036,10 +984,10 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						@extend %bg_color_co_red;
+						background: $pink;
 					}
 					.en_tt {
-						@extend %font_color_co_red;
+						color: $pink;
 					}
 					.ex_txt {
 						@include font-size(32);
@@ -1050,23 +998,39 @@ body {
 					}
 				}
 				article.distinction_at {
-					@include opacity-bg(#fff, 0.4);
-					@include breakpoint(medium) {
-						@include opacity-bg(#eceae7, 0.4);
-						scrollbar-track-color: #eceae7;
-					}
 					ul {
 						padding: 0 10px;
 						margin: 0;
 						li {
+							background: #fff;
+							background: rgba(255, 255, 255, 0.4);
 							padding: 80px 40px;
 							word-break: keep-all;
+							&:hover {
+								img {
+									-webkit-animation: 3s cake ease infinite alternate;
+								}
+								@keyframes cake {
+									from { 
+										-webkit-transform: rotateY(0deg);
+										transform: rotateY(0deg);
+									 }
+									to { 
+										-webkit-transform: rotateY(360deg);
+										transform: rotateY(360deg);
+									 }
+								}
+							}
+							@include breakpoint(large) {
+								border-bottom: 1px solid rgba(102,102,102,0.1);
+								-webkit-animation: none;
+								animation: none;
+							}
 							@include breakpoint(medium) {
 								padding: 60px 40px;
-								border-bottom: 1px solid rgba(102,102,102,0.1);
 							}
 							h3.dis_tt {
-								@extend %font_color_co_light_black;
+								color: $gray-800;
 								@include font-size(26);
 								font-family: 'nsE';
 								@include breakpoint(small) {
@@ -1084,7 +1048,7 @@ body {
 								}
 							}
 							p.dis_list {
-								@extend %font_color_co_light_black;
+								color: $gray-800;
 								@include font-size(16);
 								@include line-height(11);
 								background: url(../img/sub3_arrow.png) no-repeat left 5px;
@@ -1115,7 +1079,7 @@ body {
 						
 					}
 					&.line_2 {
-						margin-left: -300px;
+						margin-left: -290px;
 						@include breakpoint(laptop) {
 							display: none;
 						}
@@ -1133,7 +1097,7 @@ body {
 						}
 					}
 					&.line_4 {
-						margin-left: 300px;
+						margin-left: 290px;
 						@include breakpoint(laptop) {
 							display: none;
 						}
@@ -1157,25 +1121,26 @@ body {
 
 		//sub4
 		&.sub4{
-			@extend %bg_color_co_light_gray;
+			background: $indigo;
 			.inner {
 				.tit_wrap {
 					i {
-						@extend %bg_color_co_black;
+						background: $black;
 					}
 					.en_tt {
-						@extend %font_color_co_black;
+						color: $black;
 					}
 				}
 				article.partner_at {
 					ul.review_wrap {
 						@include clearfix();
+						padding: 0;
 						&.mg_t {
 							margin-top:3%;
 						}
 						li {
 							@include clearfix();
-							@extend %bg_color_co_white;
+							background: $white;
 							@include border-radius(10px);
 							float: left;
 							width: 48.5%;
@@ -1252,7 +1217,7 @@ body {
 								}
 							}
 							.review_txt {
-								@extend %font_color_co_light_black;
+								color: $gray-800;
 								height: 100%;
 								width: 50%;
 								float: right;
@@ -1269,7 +1234,7 @@ body {
 									padding: 35px 15px 15px;
 								}
 								h3 {
-									@extend %font_color_co_light_black;
+									color: $gray-800;
 									@include font-size(18);
 									font-family: 'nsE';
 									word-break: keep-all;
@@ -1307,7 +1272,7 @@ body {
 										}
 									}
 									a.only_btn {
-										@extend %font_color_co_light_black;
+										color: $gray-800;
 										@include font-size(14);
 										@include inline-block;
 										margin-top:18px;
@@ -1315,18 +1280,41 @@ body {
 										border: 1px solid #777;
 										text-decoration: none;
 										font-family: 'nsR';
-										-webkit-transition: all 0.3s;
-										-o-transition: all 0.3s;
-										transition: all 0.3s;
+										position: relative;
+										overflow: hidden;
+										&:before {
+											content: "";
+											position: absolute;
+											top: 0;
+											left: -100%;
+											width: 100%;
+											height: 100%;
+											background: linear-gradient(
+											  120deg,
+											  transparent,
+											  rgba(146, 148, 248, 0.2),
+											  transparent
+											);
+											transition: all 650ms;
+										}
+										&:hover:before {
+											left: 100%;
+										}
 										&:hover {
-											@extend %font_color_co_black;
+											//@include opacity-bg(#fff, 0.3);
+											color: $black;
+											border: 1px solid #303030;
+											img {
+												margin-left: 5px;
+												-webkit-transition: all 0.3s;
+												-o-transition: all 0.3s;
+												transition: all 0.3s;
+											}
+										}
+										img {
 											-webkit-transition: all 0.3s;
 											-o-transition: all 0.3s;
 											transition: all 0.3s;
-											border: 1px solid #303030;
-											img {
-												margin-left: 2px;
-											}
 										}
 									}
 								}
@@ -1340,39 +1328,46 @@ body {
 	}//section
 	
 	.footer {
-		background: #eeeeee;
+		background: $indigo;
 		height: 280px;
 		@include breakpoint(small) {
 			padding-top:10px;
 			height: 320px;
 		}
 		section.ptn_wrap {
-			@extend %bg_color_co_light_gray;
+			background: $indigo;
 			.inner {
 				padding: 0;
 				.ptn_carousel {
 					height: 90px;
-					@extend %bg_color_co_white;
-					div {
-						width: 100%;
-						text-align: center;
-						@include clearfix();
-						&.item {
-							float: left;
-							margin: 30px auto;
-							border-right: 1px solid #a9a9a9;
+					background: $white;
+					.owl-item {
+						&:hover {
 							img {
-								@include inline-block;
-								width: auto;
+							-ms-transform: scale(1.1, 1.1);
+							-webkit-transform: scale(1.1, 1.1);
+							transform: scale(1.1);
+							transition: .3s;
+							}
+						}
+						a {
+							@include inline-block;
+							width: 100%;
+							text-align: center;
+							&.item {
+								float: left;
+								margin: 30px auto;
+								border-right: 1px solid #a9a9a9;
+								img {
+									@include inline-block;
+									width: auto;
+									transition: .3s;
+								}
 							}
 						}
 					}
 					.owl-nav {
-						position: absolute;
-						width: 100%;
-						top: 0;
-						left: 0;
-						height: 90px;
+						position: relative;
 						margin: 0;
 						.owl-prev {
 							background: #fff url(../img/arrow_g_l.png) no-repeat 45% 46%;
@@ -1381,7 +1376,7 @@ body {
 							width: 61px;
 							height: 90px;
 							border-radius: 0;
-							margin: 0;
+							margin: -90px 0 0 0;
 							outline:none;
 							&:hover {
 								background: #f5f5f5 url(../img/arrow_g_l.png) no-repeat 45% 46%;
@@ -1400,7 +1395,7 @@ body {
 							width: 61px;
 							height: 90px;
 							border-radius: 0;
-							margin: 0;
+							margin: -90px 0 0 0;
 							outline:none;
 							&:hover {
 								background: #f5f5f5 url(../img/arrow_g_r.png) no-repeat 53% 46%;
@@ -1423,7 +1418,7 @@ body {
 			}
 		}
 		section.info_wrap {
-			background: #202020;
+			background: $gray-900;
 			margin-top:30px;
 			.inner {
 				position: relative;
@@ -1443,8 +1438,8 @@ body {
 					top: 0;
 					right: 0;
 					text-transform: uppercase;
-					@extend %bg_color_co_light_black;
-					@extend %font_color_co_white;
+					background: $gray-800;
+					color: $white;
 					@include font-size(11);
 					font-family: 'nsE';
 					padding: 4px 5px;
@@ -1456,9 +1451,17 @@ body {
 						top: -20px;
 					}
 				}
+				@keyframes balloon2 {
+					0% {
+						margin-top: 10px; 
+					}
+					100% {
+						margin-top: 15px;
+					}
+				}
 				p {
 					&.info {
-						@extend %font_color_co_white;
+						color: $white;
 						@include font-size(13);
 						@include line-height(10);
 						font-family: 'nsB';
@@ -1468,7 +1471,7 @@ body {
 						}
 					}
 					&.copy {
-						@extend %font_color_co_light_gray;
+						color: $gray-200;
 						@include font-size(11);
 						text-align: left;
 						margin-top: 15px;
