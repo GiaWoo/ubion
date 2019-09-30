@@ -160,8 +160,8 @@ body {
 							@include font-size(11);
 							@include border-radius(4px);
 							@include inline-block();
-							color: rgba(255,255,255,0.5);
-							border: 1px solid rgba(255,255,255,0.3);
+							color: $gray-600;
+							border: 1px solid $gray-500;
 							padding: 9px 10px;
 							text-decoration: none;
 							-webkit-transition: all 0.3s;
@@ -176,22 +176,21 @@ body {
 								background: url(../img/hd_icon02.png) no-repeat 10px 45%;
 							}
 							&:hover {
-								color: rgba(255,255,255,0.7);
-								border: 1px solid rgba(255,255,255,0.5);
+								color: $gray-800;
+								border: 1px solid $gray-800;
 								-webkit-transition: all 0.3s;
 								-o-transition: all 0.3s;
 								transition: all 0.3s;
 							}
 							@include breakpoint(medium) {
-								color: rgba(255,255,255,0.6);
-								border: 1px solid rgba(255,255,255,0.5);
+								color: $gray-800;
+								border: 1px solid $gray-800;
 							}
 							span {
 								//padding-left: 25px;
 							}
 						}
 					}
-	
 				}
 			}
 
@@ -261,9 +260,9 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			background: $indigo;
-			//@include opacity-bg(#fff, 0.1);
-			border-bottom: 1px solid rgba(255,255,255,0.1);
+			//background: $gray-900;
+			@include opacity-bg(#fff, 0.1);
+			border-bottom: 1px solid rgba(255,255,255,0.3);
 			-webkit-transition: all 0.5s;
 			-o-transition: all 0.5s;
 			transition: all 0.5s;
@@ -297,6 +296,27 @@ body {
 									}
 								}
 							}
+						}
+					}
+				}
+				div.down_box {
+					a.down_btn {
+						color: $gray-400;
+						border: 1px solid $gray-400;
+						&.bg1 {
+							background: url(../img/hd_icon01_fx.png) no-repeat 9px 45%;
+						}
+						&.bg2 {
+							background: url(../img/hd_icon02_fx.png) no-repeat 10px 45%;
+						}
+
+						&:hover {
+							color: $gray-100;
+							border: 1px solid $gray-100;
+						}
+						@include breakpoint(medium) {
+							color: $gray-100;
+							border: 1px solid $gray-100;
 						}
 					}
 				}
@@ -859,12 +879,12 @@ body {
 					height: 430px;
 					overflow-y: auto;
 					overflow-x: hidden;
-					scrollbar-track-color: #111;
-					scrollbar-arrow-color: #d2a16d;
-					scrollbar-face-color: #303030;
+					scrollbar-track-color: $gray-300;
+					scrollbar-arrow-color:$gray-600;
+					scrollbar-face-color: $beige;
 					//scrollbar-darkshadow-color: #111;
 					//scrollbar-highlight-color: #111;
-					scrollbar-shadow-color: #111;
+					scrollbar-shadow-color: $beige;
 					-webkit-overflow-scrolling: touch;
 					@include breakpoint(large) {
 						height: auto;
@@ -874,7 +894,7 @@ body {
 						width: 10px; 
 					}
 					&::-webkit-scrollbar-thumb { 
-						background: $gray-600;
+						background: $gray-500;
 					}
 					&::-webkit-scrollbar-button { 
 						display: none;
@@ -886,7 +906,7 @@ body {
 						color: #111;
 						li {
 							height: 270px;
-							padding-right: 0;
+							padding-left: 0;
 							margin-top:1%;
 							@include breakpoint(large) {
 								padding: 0 6px;
@@ -897,11 +917,17 @@ body {
 								margin-top:2%;
 							}
 							dl {
-								background: #fff url(../img/sec2_icon01.png) no-repeat 29% 60%;
-									&.conts {
+								background: $white url(../img/sec2_icon01.png) no-repeat 29% 60%;
+								border: 1px solid $gray-400;
+								border-radius: 4px;
+								box-shadow: 1px 1px 10px $gray-300;
+								&.conts {
 									width: 100%;
 									height: 100%;
 									padding: 50px 30px;
+									@include breakpoint(medium) {
+										padding: 30px 20px;
+									}
 									dt.txt {
 										color: $gray-800;
 										@include font-size(20);
@@ -927,7 +953,7 @@ body {
 									margin-top: 2%;
 								}
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(3) {
@@ -945,27 +971,27 @@ body {
 									margin-top: 2%;
 								}
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(5) {
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(7) {
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(10) {
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(12) {
 								dl {
-									background: #eceae7 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 						}
@@ -984,10 +1010,10 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						background: $pink;
+						background: $navy;
 					}
 					.en_tt {
-						color: $pink;
+						color: $navy;
 					}
 					.ex_txt {
 						@include font-size(32);
@@ -1125,10 +1151,13 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						background: $black;
+						background: $gray-200;
 					}
 					.en_tt {
-						color: $black;
+						color: $gray-200;
+					}
+					.ex_txt {
+						color: $gray-400;
 					}
 				}
 				article.partner_at {
@@ -1139,7 +1168,6 @@ body {
 							margin-top:3%;
 						}
 						li {
-							@include clearfix();
 							background: $white;
 							@include border-radius(10px);
 							float: left;
@@ -1151,6 +1179,7 @@ body {
 							}
 							@include breakpoint(large) {
 								float: none;
+								@include clearfix();
 								width: 100%;
 								margin-top: 3%;
 								margin-left: 0;
@@ -1255,14 +1284,25 @@ body {
 							}
 							&.only3 {
 								background: none;
+								@include breakpoint(large) {
+									height: auto;
+								}
 								.review_txt {
 									width: 100%;
 									background: url(../img/sec4_icon.png) no-repeat 92% top;
+									color: $gray-100;
+									h3 {
+										color: $gray-100;
+									}
 									@include breakpoint(large) {
-										background: #fff url(../img/sec4_icon.png) no-repeat 92% top;
+										background: #fff url(../img/sec4_icon.png) no-repeat 92% 40%;
+										color: $gray-800;
 										@include border-radius(10px);
 										p {
 											width: 60%;
+										}
+										h3 {
+											color: $gray-800;
 										}
 									}
 									@include breakpoint(small) {
@@ -1272,16 +1312,19 @@ body {
 										}
 									}
 									a.only_btn {
-										color: $gray-800;
+										color: $gray-300;
 										@include font-size(14);
 										@include inline-block;
 										margin-top:18px;
 										padding: 12px 16px;
-										border: 1px solid #777;
+										border: 1px solid $gray-300;
 										text-decoration: none;
 										font-family: 'nsR';
 										position: relative;
 										overflow: hidden;
+										@include breakpoint(large) {
+											background: $gray-800;
+										}
 										&:before {
 											content: "";
 											position: absolute;
@@ -1302,8 +1345,8 @@ body {
 										}
 										&:hover {
 											//@include opacity-bg(#fff, 0.3);
-											color: $black;
-											border: 1px solid #303030;
+											color: $gray-100;
+											border: 1px solid $gray-100;
 											img {
 												margin-left: 5px;
 												-webkit-transition: all 0.3s;
