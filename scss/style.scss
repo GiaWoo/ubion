@@ -499,7 +499,7 @@ body {
 									@include font-size(32);
 								}
 								span {
-									color: $beige;
+									color: $navy;
 								}
 							}
 							p {
@@ -869,10 +869,10 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						background: $beige;
+						background: $navy;
 					}
 					.en_tt {
-						color: $beige;
+						color: $navy;
 					}
 				}
 				article.course_at {
@@ -934,7 +934,7 @@ body {
 										font-family: 'nsB';
 									}
 									dd {
-										background: $beige;
+										background: $navy;
 										color: $white;
 										@include font-size(14);
 										font-family: 'nsL';
@@ -1010,10 +1010,10 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						background: $navy;
+						background: $sky;
 					}
 					.en_tt {
-						color: $navy;
+						color: $sky;
 					}
 					.ex_txt {
 						@include font-size(32);
