@@ -1,4 +1,14 @@
-@charset 'utf-8';
+/************************************************
+	Decrition by : 우지아 gia's
+	Date : 2019-10-17
+	Version : 1.2
+
+	--- Css List ---
+	01. Header
+	02. Section
+	03. Footer
+************************************************/
+@charset "utf-8";
 
 //NanumSquare
 @import 'NanumSquare';
@@ -29,7 +39,10 @@ body {
 	margin: 0;
 	padding: 0;
 	background: $white;
-	
+
+	/*--------------------------------------------------
+		01. Header
+	---------------------------------------------------*/	
 	header {
 		&.header {
 			position: fixed;
@@ -217,7 +230,7 @@ body {
 						display: block;
 						width: 100%;
 						height: $weight;
-						background: $gray-100;
+						background: $gray-500;
 						position: absolute;
 						transition: $speed $easing;
 					}
@@ -260,9 +273,9 @@ body {
 			background: none;
 			border: none;
 			padding: 0;
-			//background: $gray-900;
-			@include opacity-bg(#fff, 0.1);
-			border-bottom: 1px solid rgba(255,255,255,0.3);
+			background: $black;
+			//@include opacity-bg(#fff, 0.1);
+			//border-bottom: 1px solid rgba(255,255,255,0.3);
 			-webkit-transition: all 0.5s;
 			-o-transition: all 0.5s;
 			transition: all 0.5s;
@@ -302,7 +315,7 @@ body {
 				div.down_box {
 					a.down_btn {
 						color: $gray-400;
-						border: 1px solid $gray-400;
+						border: 1px solid $gray-500;
 						&.bg1 {
 							background: url(../img/hd_icon01_fx.png) no-repeat 9px 45%;
 						}
@@ -312,7 +325,7 @@ body {
 
 						&:hover {
 							color: $gray-100;
-							border: 1px solid $gray-100;
+							border: 1px solid $gray-200;
 						}
 						@include breakpoint(medium) {
 							color: $gray-100;
@@ -323,11 +336,15 @@ body {
 			}
 			@include breakpoint(large) {
 				padding: 0;
-				@include opacity-bg(#fff, 0.2);
+				//@include opacity-bg(#fff, 0.2);
+				color: $black;
 			}
 		}
-	}//header
+	}
 	
+	/*--------------------------------------------------
+		02. Section
+	---------------------------------------------------*/	
 	section {
 		//공통
 		h2.tt_blind {
@@ -499,8 +516,14 @@ body {
 									@include font-size(32);
 								}
 								span {
-									color: $navy;
-									text-shadow: 0px 1px 0px #003b88;
+									//해결방법찾기
+									-ms-text-shadow:
+										-1px -1px 0 #fff,  
+										1px -1px 0 #fff,
+										-1px  1px 0 #fff,
+										1px  1px 0 #fff;
+									-webkit-text-fill-color: transparent;
+									-webkit-text-stroke: 1px #fff;
 								}
 							}
 							p {
@@ -882,10 +905,10 @@ body {
 					overflow-x: hidden;
 					scrollbar-track-color: $gray-300;
 					scrollbar-arrow-color:$gray-600;
-					scrollbar-face-color: $beige;
+					scrollbar-face-color: $navy;
 					//scrollbar-darkshadow-color: #111;
 					//scrollbar-highlight-color: #111;
-					scrollbar-shadow-color: $beige;
+					scrollbar-shadow-color: $navy;
 					-webkit-overflow-scrolling: touch;
 					@include breakpoint(large) {
 						height: auto;
@@ -954,7 +977,7 @@ body {
 									margin-top: 2%;
 								}
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(3) {
@@ -972,27 +995,27 @@ body {
 									margin-top: 2%;
 								}
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(5) {
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(7) {
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(10) {
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 							&:nth-child(12) {
 								dl {
-									background: $beige-100 url(../img/sec2_icon02.png) no-repeat 75% 75%;
+									background: $beige url(../img/sec2_icon02.png) no-repeat 75% 75%;
 								}
 							}
 						}
@@ -1011,10 +1034,10 @@ body {
 			.inner {
 				.tit_wrap {
 					i {
-						background: $sky;
+						background: $pink;
 					}
 					.en_tt {
-						color: $sky;
+						color: $pink;
 					}
 					.ex_txt {
 						@include font-size(32);
@@ -1368,9 +1391,11 @@ body {
 				}
 			}			
 		}
-
-	}//section
+	}
 	
+	/*--------------------------------------------------
+		03. Footer
+	---------------------------------------------------*/	
 	.footer {
 		background: $indigo;
 		height: 280px;
