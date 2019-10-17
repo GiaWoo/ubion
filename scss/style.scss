@@ -517,13 +517,9 @@ body {
 								}
 								span {
 									//해결방법찾기
-									-ms-text-shadow:
-										-1px -1px 0 #fff,  
-										1px -1px 0 #fff,
-										-1px  1px 0 #fff,
-										1px  1px 0 #fff;
+									background: -ms-linear-gradient(rgba(255,255,255,0.1) 93%, rgba(255,255,255,0.4) 7%);
 									-webkit-text-fill-color: transparent;
-									-webkit-text-stroke: 1px #fff;
+									-webkit-text-stroke: 1px $white;
 								}
 							}
 							p {
@@ -690,7 +686,6 @@ body {
 		//sub1
 		&.sub1{
 			background: $gray-900;
-			@include clearfix;
 			min-height: 900px;
 			@include breakpoint(medium) {
 				min-height: auto;
@@ -705,6 +700,7 @@ body {
 					}
 				}
 				.owl-carousel {
+					@include clearfix;
 					div {
 						height: 100%;
 						position: relative;
@@ -1049,6 +1045,7 @@ body {
 				}
 				article.distinction_at {
 					ul {
+						@include clearfix;
 						padding: 0 10px;
 						margin: 0;
 						li {
@@ -1408,6 +1405,7 @@ body {
 			.inner {
 				padding: 0;
 				.ptn_carousel {
+					@include clearfix;
 					height: 90px;
 					background: $white;
 					.owl-item {
