@@ -517,9 +517,11 @@ body {
 								}
 								span {
 									//해결방법찾기
-									background: -ms-linear-gradient(rgba(255,255,255,0.1) 93%, rgba(255,255,255,0.4) 7%);
+									background: -ms-linear-gradient(#212529 50%, #212529 50%);
 									-webkit-text-fill-color: transparent;
 									-webkit-text-stroke: 1px $white;
+									padding: 0 4px 0 1px;
+									border-radius: 5px;
 								}
 							}
 							p {
